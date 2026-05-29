@@ -1,0 +1,6 @@
+/* Remove any ::before pseudo-element from nav menu items */
+/*Geist UI 的 CssBaseline 组件注入了这段全局 CSS，需要将其覆盖*/
+li.rp-nav-menu__item::before {
+  display: none !important;
+  content: none !important;
+}
