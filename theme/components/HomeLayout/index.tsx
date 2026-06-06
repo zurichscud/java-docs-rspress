@@ -1,10 +1,11 @@
 import {
-  BookOpen,
-  Coffee,
-  Leaf,
-  ServerCog,
-  TerminalSquare,
-} from 'lucide-react';
+  siMarkdown,
+  siOpenapiinitiative,
+  siOpenjdk,
+  siSpring,
+  siSpringboot,
+  type SimpleIcon,
+} from 'simple-icons';
 
 const modules = [
   {
@@ -13,7 +14,7 @@ const modules = [
     text: 'Rspress、MDX、文件树与站点使用说明。',
     href: '/guide/start/introduction',
     count: '8 topics',
-    Icon: BookOpen,
+    icon: siMarkdown,
   },
   {
     name: 'Springboot',
@@ -21,7 +22,7 @@ const modules = [
     text: '入门、请求处理、自动配置、日志、整合与异常处理。',
     href: '/Springboot/入门/1.QuickStart',
     count: '34 notes',
-    Icon: ServerCog,
+    icon: siSpringboot,
   },
   {
     name: 'JAVA',
@@ -29,7 +30,7 @@ const modules = [
     text: '基础语法、集合、泛型、反射、注解、日期与面向对象。',
     href: '/JAVA/1.JAVA运行',
     count: '70+ notes',
-    Icon: Coffee,
+    icon: siOpenjdk,
   },
   {
     name: 'api',
@@ -37,7 +38,7 @@ const modules = [
     text: '站点命令与 API 参考。',
     href: '/api/',
     count: '2 pages',
-    Icon: TerminalSquare,
+    icon: siOpenapiinitiative,
   },
   {
     name: 'Spring',
@@ -45,9 +46,17 @@ const modules = [
     text: 'Spring 容器、AOP、Quartz、XXL-Job、支付与短信服务。',
     href: '/Spring/Spring/1.QuickStart',
     count: '40+ notes',
-    Icon: Leaf,
+    icon: siSpring,
   },
 ];
+
+function SimpleIconMark({ icon }: { icon: SimpleIcon }) {
+  return (
+    <svg viewBox="0 0 24 24" focusable="false">
+      <path d={icon.path} fill="currentColor" />
+    </svg>
+  );
+}
 
 const stats = [
   ['5', '一级模块'],
@@ -122,7 +131,7 @@ export function HomeLayout() {
               <div className="home-doc-card__body">
                 <div className="home-doc-card__cover">
                   <span className="home-doc-card__icon" aria-hidden="true">
-                    <item.Icon size={118} strokeWidth={1.06} />
+                    <SimpleIconMark icon={item.icon} />
                   </span>
                   <span className="home-doc-card__index">
                     {String(index + 1).padStart(2, '0')}

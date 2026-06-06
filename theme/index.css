@@ -436,6 +436,8 @@ li.rp-nav-menu__item::before {
 .home-doc-card__icon svg {
   position: relative;
   z-index: 1;
+  width: 112px;
+  height: 112px;
 }
 
 .home-doc-card__index {
@@ -651,6 +653,11 @@ li.rp-nav-menu__item::before {
     width: 118px;
     height: 118px;
     margin: -18px 0 0 -16px;
+  }
+
+  .home-doc-card__icon svg {
+    width: 98px;
+    height: 98px;
   }
 
   .home-stat {
