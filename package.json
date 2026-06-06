@@ -11,6 +11,7 @@
   "dependencies": {
     "@geist-ui/core": "^2.3.8",
     "@rspress/core": "^2.0.12",
+    "lucide-react": "^1.17.0",
     "rspress-plugin-file-tree": "^1.0.5",
     "rspress-plugin-mermaid": "^1.0.1"
   },

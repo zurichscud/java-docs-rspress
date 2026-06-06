@@ -1,33 +1,51 @@
+import {
+  BookOpen,
+  Coffee,
+  Leaf,
+  ServerCog,
+  TerminalSquare,
+} from 'lucide-react';
+
 const modules = [
   {
     name: 'guide',
     title: 'Guide',
     text: 'Rspress、MDX、文件树与站点使用说明。',
     href: '/guide/start/introduction',
+    count: '8 topics',
+    Icon: BookOpen,
   },
   {
     name: 'Springboot',
     title: 'Spring Boot',
     text: '入门、请求处理、自动配置、日志、整合与异常处理。',
     href: '/Springboot/入门/1.QuickStart',
+    count: '34 notes',
+    Icon: ServerCog,
   },
   {
     name: 'JAVA',
     title: 'Java',
     text: '基础语法、集合、泛型、反射、注解、日期与面向对象。',
     href: '/JAVA/1.JAVA运行',
+    count: '70+ notes',
+    Icon: Coffee,
   },
   {
     name: 'api',
     title: 'API',
     text: '站点命令与 API 参考。',
     href: '/api/',
+    count: '2 pages',
+    Icon: TerminalSquare,
   },
   {
     name: 'Spring',
     title: 'Spring',
     text: 'Spring 容器、AOP、Quartz、XXL-Job、支付与短信服务。',
     href: '/Spring/Spring/1.QuickStart',
+    count: '40+ notes',
+    Icon: Leaf,
   },
 ];
 
@@ -95,10 +113,30 @@ export function HomeLayout() {
         </div>
         <div className="home-doc-grid">
           {modules.map((item, index) => (
-            <a className="home-doc-card" href={item.href} key={item.title}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
+            <a
+              className="home-doc-card"
+              data-module={item.name}
+              href={item.href}
+              key={item.title}
+            >
+              <div className="home-doc-card__body">
+                <div className="home-doc-card__cover">
+                  <span className="home-doc-card__icon" aria-hidden="true">
+                    <item.Icon size={118} strokeWidth={1.06} />
+                  </span>
+                  <span className="home-doc-card__index">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                </div>
+                <div className="home-doc-card__content">
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+                <div className="home-doc-card__footer">
+                  <span>{item.count}</span>
+                  <i aria-hidden="true">↗</i>
+                </div>
+              </div>
             </a>
           ))}
         </div>
