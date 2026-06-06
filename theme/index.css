@@ -333,6 +333,8 @@ li.rp-nav-menu__item::before {
   font-weight: 850;
   letter-spacing: 0;
   text-transform: uppercase;
+  white-space: nowrap;
+  min-width: 7ch;
 }
 
 .home-update-list strong {

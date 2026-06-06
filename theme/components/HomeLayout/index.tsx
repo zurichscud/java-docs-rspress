@@ -7,6 +7,7 @@ import {
   type SimpleIcon,
 } from 'simple-icons';
 import recentUpdates from '../../data/recent-updates.json';
+import statsData from '../../data/stats.json';
 
 const modules = [
   {
@@ -60,9 +61,9 @@ function SimpleIconMark({ icon }: { icon: SimpleIcon }) {
 }
 
 const stats = [
-  ['5', '模块数'],
-  ['185', '文件数'],
-  ['1 小时 44 分钟', '距离上一次更新已过'],
+  [String(statsData.moduleCount), '模块数'],
+  [String(statsData.fileCount), '文件数'],
+  [statsData.lastUpdateAgo, '距离上一次更新已过'],
 ];
 
 export function HomeLayout() {
