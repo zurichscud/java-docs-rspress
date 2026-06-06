@@ -60,9 +60,9 @@ function SimpleIconMark({ icon }: { icon: SimpleIcon }) {
 }
 
 const stats = [
-  ['5', '一级模块'],
-  ['docs', '内容根目录'],
-  ['public', '静态资源目录已排除'],
+  ['5', '模块数'],
+  ['185', '文件数'],
+  ['1 小时 44 分钟', '距离上一次更新已过'],
 ];
 
 export function HomeLayout() {
