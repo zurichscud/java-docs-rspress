@@ -6,6 +6,7 @@ import {
   siSpringboot,
   type SimpleIcon,
 } from 'simple-icons';
+import recentUpdates from '../../data/recent-updates.json';
 
 const modules = [
   {
@@ -82,26 +83,25 @@ export function HomeLayout() {
           </div>
         </div>
 
-        <div className="home-console" aria-label="docs 一级目录模块摘要">
+        <div className="home-console" aria-label="最近更新文件">
           <div className="home-console__bar">
             <span />
             <span />
             <span />
           </div>
           <div className="home-console__content">
-            <p className="home-console__eyebrow">docs/</p>
-            <ul className="home-module-list">
-              {modules.map((item) => (
-                <li key={item.name}>
-                  <span>{item.name}</span>
-                  <strong>{item.title}</strong>
+            <p className="home-console__eyebrow">recent files</p>
+            <ul className="home-update-list">
+              {recentUpdates.slice(0, 5).map((item) => (
+                <li key={item.path}>
+                  <a href={item.href}>
+                    <span className="home-update-list__module">{item.module}</span>
+                    <strong>{item.title}</strong>
+                    <span className="home-update-list__time">{item.updatedAt}</span>
+                  </a>
                 </li>
               ))}
             </ul>
-            <div className="home-console__footer">
-              <span>first-level directories</span>
-              <strong>{modules.length} modules</strong>
-            </div>
           </div>
         </div>
       </section>
@@ -118,7 +118,6 @@ export function HomeLayout() {
       <section className="home-section home-section--route" aria-labelledby="route-title">
         <div className="home-section__header">
           <p className="home-kicker">Module Route</p>
-          <h2 id="route-title">快速进入 docs 目录下的模块</h2>
         </div>
         <div className="home-doc-grid">
           {modules.map((item, index) => (
