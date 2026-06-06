@@ -129,12 +129,12 @@ export function HomeLayout() {
               key={item.title}
             >
               <div className="home-doc-card__body">
-                <div className="home-doc-card__cover">
-                  <span className="home-doc-card__icon" aria-hidden="true">
-                    <SimpleIconMark icon={item.icon} />
-                  </span>
+                <div className="home-doc-card__head">
                   <span className="home-doc-card__index">
                     {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <span className="home-doc-card__icon" aria-hidden="true">
+                    <SimpleIconMark icon={item.icon} />
                   </span>
                 </div>
                 <div className="home-doc-card__content">
