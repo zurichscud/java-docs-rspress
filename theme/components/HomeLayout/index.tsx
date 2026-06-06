@@ -73,14 +73,6 @@ export function HomeLayout() {
           <p className="home-kicker">Docs Modules</p>
           <h1 id="home-title">莫听穿林打叶声，何妨吟啸且徐行。</h1>
           <p className="home-lede">竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。</p>
-          <div className="home-actions" aria-label="主页操作">
-            <a className="home-button home-button--primary" href="/Springboot/入门/1.QuickStart">
-              进入 Spring Boot
-            </a>
-            <a className="home-button home-button--ghost" href="/JAVA/1.JAVA运行">
-              进入 Java
-            </a>
-          </div>
         </div>
 
         <div className="home-console" aria-label="最近更新文件">

@@ -18,11 +18,23 @@ export default defineConfig({
   markdown: {
     shiki: {
       langs: ['tsx', 'ts', 'js', 'java', 'properties'],
-      langAlias: {
-        JAVA: 'java',
-        'java[编译后]': 'java',
-        '[lombok.config]': 'properties',
-      },
+      transformers: [
+        {
+          preprocess(code, { lang }) {
+            if (lang) {
+              const aliasMap: Record<string, string> = {
+                JAVA: 'java',
+                'java[编译后]': 'java',
+                '[lombok.config]': 'properties',
+              };
+              if (aliasMap[lang]) {
+                this.options.lang = aliasMap[lang];
+              }
+            }
+            return code;
+          },
+        },
+      ],
     },
   },
   themeConfig: {
