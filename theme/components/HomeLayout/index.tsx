@@ -1,32 +1,40 @@
-const highlights = [
+const modules = [
   {
-    label: 'MDX Lab',
-    title: '把文档写成可交互的产品说明',
-    text: '组合 MDX、代码块元信息、文件树和组件示例，让教程不只是文字，而是能直接验证的工作台。',
+    name: 'guide',
+    title: 'Guide',
+    text: 'Rspress、MDX、文件树与站点使用说明。',
+    href: '/guide/start/introduction',
   },
   {
-    label: 'Design System',
-    title: '统一站点气质与阅读节奏',
-    text: '通过 Rspress 自定义主题入口覆盖首页和 CSS 变量，保留默认主题能力，同时拥有独立视觉表达。',
+    name: 'Springboot',
+    title: 'Spring Boot',
+    text: '入门、请求处理、自动配置、日志、整合与异常处理。',
+    href: '/Springboot/入门/1.QuickStart',
   },
   {
-    label: 'Plugin Ready',
-    title: '为复杂技术内容准备好插件位',
-    text: '文件树、Mermaid、JSON Schema 与 API 文档可以在同一个信息架构中自然展开。',
+    name: 'JAVA',
+    title: 'Java',
+    text: '基础语法、集合、泛型、反射、注解、日期与面向对象。',
+    href: '/JAVA/1.JAVA运行',
   },
-];
-
-const docs = [
-  { title: '快速开始', text: '了解站点结构、导航配置和 Rspress 基础能力。', href: '/guide/start/getting-started' },
-  { title: 'MDX 使用', text: '使用组件、容器、代码块标题和元信息增强文档。', href: '/guide/use-mdx/' },
-  { title: '文件树示例', text: '展示项目目录、状态和技术层级关系。', href: '/guide/file-tree-example' },
-  { title: 'API 命令', text: '查阅 CLI 命令与站点运行方式。', href: '/api/commands' },
+  {
+    name: 'api',
+    title: 'API',
+    text: '站点命令与 API 参考。',
+    href: '/api/',
+  },
+  {
+    name: 'Spring',
+    title: 'Spring',
+    text: 'Spring 容器、AOP、Quartz、XXL-Job、支付与短信服务。',
+    href: '/Spring/Spring/1.QuickStart',
+  },
 ];
 
 const stats = [
-  ['4', '核心文档入口'],
-  ['2', '插件能力已接入'],
-  ['100%', 'Rspress v2 主题兼容'],
+  ['5', '一级模块'],
+  ['docs', '内容根目录'],
+  ['public', '静态资源目录已排除'],
 ];
 
 export function HomeLayout() {
@@ -34,37 +42,38 @@ export function HomeLayout() {
     <main className="home-shell" aria-labelledby="home-title">
       <section className="home-hero">
         <div className="home-hero__copy">
-          <p className="home-kicker">Rspress Custom Theme</p>
-          <h1 id="home-title">一个面向技术创作的高质感文档主页</h1>
-          <p className="home-lede">
-            用清晰的信息架构、克制的视觉层次和可扩展的主题入口，把知识库变成一个真正好逛、好读、好维护的产品界面。
-          </p>
+          <p className="home-kicker">Docs Modules</p>
+          <h1 id="home-title">莫听穿林打叶声，何妨吟啸且徐行。</h1>
+          <p className="home-lede">竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。</p>
           <div className="home-actions" aria-label="主页操作">
-            <a className="home-button home-button--primary" href="/guide/start/getting-started">
-              开始阅读
+            <a className="home-button home-button--primary" href="/Springboot/入门/1.QuickStart">
+              进入 Spring Boot
             </a>
-            <a className="home-button home-button--ghost" href="/guide/use-mdx/">
-              查看 MDX 能力
+            <a className="home-button home-button--ghost" href="/JAVA/1.JAVA运行">
+              进入 Java
             </a>
           </div>
         </div>
 
-        <div className="home-console" aria-label="Rspress 主题定制摘要">
+        <div className="home-console" aria-label="docs 一级目录模块摘要">
           <div className="home-console__bar">
             <span />
             <span />
             <span />
           </div>
           <div className="home-console__content">
-            <p className="home-console__eyebrow">theme/index.tsx</p>
-            <pre>
-              <code>{`import './index.css';
-export * from '@rspress/core/theme-original';
-export { HomeLayout } from './components/HomeLayout';`}</code>
-            </pre>
+            <p className="home-console__eyebrow">docs/</p>
+            <ul className="home-module-list">
+              {modules.map((item) => (
+                <li key={item.name}>
+                  <span>{item.name}</span>
+                  <strong>{item.title}</strong>
+                </li>
+              ))}
+            </ul>
             <div className="home-console__footer">
-              <span>home layout override</span>
-              <strong>v2 ready</strong>
+              <span>first-level directories</span>
+              <strong>{modules.length} modules</strong>
             </div>
           </div>
         </div>
@@ -79,29 +88,13 @@ export { HomeLayout } from './components/HomeLayout';`}</code>
         ))}
       </section>
 
-      <section className="home-section" aria-labelledby="highlights-title">
-        <div className="home-section__header">
-          <p className="home-kicker">What It Enables</p>
-          <h2 id="highlights-title">为文档站准备的三个设计支点</h2>
-        </div>
-        <div className="home-highlight-grid">
-          {highlights.map((item) => (
-            <article className="home-highlight" key={item.label}>
-              <span>{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="home-section home-section--route" aria-labelledby="route-title">
         <div className="home-section__header">
-          <p className="home-kicker">Doc Route</p>
-          <h2 id="route-title">从这里进入你的内容系统</h2>
+          <p className="home-kicker">Module Route</p>
+          <h2 id="route-title">快速进入 docs 目录下的模块</h2>
         </div>
         <div className="home-doc-grid">
-          {docs.map((item, index) => (
+          {modules.map((item, index) => (
             <a className="home-doc-card" href={item.href} key={item.title}>
               <span>{String(index + 1).padStart(2, '0')}</span>
               <h3>{item.title}</h3>

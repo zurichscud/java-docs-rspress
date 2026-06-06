@@ -15,6 +15,16 @@ export default defineConfig({
     pluginFileTree(),
     mermaid(),
   ],
+  markdown: {
+    shiki: {
+      langs: ['tsx', 'ts', 'js', 'java', 'properties'],
+      langAlias: {
+        JAVA: 'java',
+        'java[编译后]': 'java',
+        '[lombok.config]': 'properties',
+      },
+    },
+  },
   themeConfig: {
     socialLinks: [
       {
