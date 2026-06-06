@@ -9,6 +9,14 @@ import {
 import recentUpdates from '../../data/recent-updates.json';
 import statsData from '../../data/stats.json';
 
+const moduleIconMap: Record<string, SimpleIcon> = {
+  guide: siMarkdown,
+  Springboot: siSpringboot,
+  JAVA: siOpenjdk,
+  api: siOpenapiinitiative,
+  Spring: siSpring,
+};
+
 const modules = [
   {
     name: 'guide',
@@ -88,9 +96,18 @@ export function HomeLayout() {
               {recentUpdates.slice(0, 5).map((item) => (
                 <li key={item.path}>
                   <a href={item.href}>
-                    <span className="home-update-list__module">{item.module}</span>
-                    <strong>{item.title}</strong>
-                    <span className="home-update-list__time">{item.updatedAt}</span>
+                    <span className="home-update-list__badge">
+                      {moduleIconMap[item.module] && (
+                        <span className="home-update-list__icon" aria-hidden="true">
+                          <SimpleIconMark icon={moduleIconMap[item.module]} />
+                        </span>
+                      )}
+                      <span className="home-update-list__module">{item.module}</span>
+                    </span>
+                    <span className="home-update-list__body">
+                      <strong>{item.title}</strong>
+                      <time className="home-update-list__time">{item.updatedAt}</time>
+                    </span>
                   </a>
                 </li>
               ))}
