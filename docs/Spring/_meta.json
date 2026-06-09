@@ -1,0 +1,17 @@
+[
+  {
+    "type": "dir",
+    "name": "Spring",
+    "label": "Spring"
+  },
+  {
+    "type": "dir",
+    "name": "JSR-303",
+    "label": "JSR-303"
+  },
+  {
+    "type": "dir",
+    "name": "Lomok",
+    "label": "Lombok"
+  }
+]

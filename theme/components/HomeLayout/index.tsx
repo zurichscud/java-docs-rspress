@@ -66,7 +66,7 @@ const modules = [
     name: 'Spring',
     title: 'Spring',
     text: 'Spring 容器、AOP、Quartz、XXL-Job、支付与短信服务。',
-    href: '/Spring/Spring/1.QuickStart',
+    href: '/Spring/Spring/QuickStart',
     count: '40+ notes',
     icon: siSpring,
   },
