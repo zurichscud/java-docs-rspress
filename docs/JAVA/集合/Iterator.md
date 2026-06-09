@@ -67,7 +67,7 @@ for (String s : list) {
 
 编译后：
 
-```java[编译后]
+```java [编译后]
 Iterator<String> it = list.iterator();
 while (it.hasNext()) {
     String s = it.next();//浅拷贝

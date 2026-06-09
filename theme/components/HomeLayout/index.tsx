@@ -1,9 +1,12 @@
 import {
+  siHtml5,
   siMarkdown,
   siOpenapiinitiative,
   siOpenjdk,
   siSpring,
   siSpringboot,
+  siSqlite,
+  siApachemaven,
   type SimpleIcon,
 } from 'simple-icons';
 import recentUpdates from '../../data/recent-updates.json';
@@ -13,6 +16,7 @@ const moduleIconMap: Record<string, SimpleIcon> = {
   guide: siMarkdown,
   Springboot: siSpringboot,
   JAVA: siOpenjdk,
+  web: siHtml5,
   api: siOpenapiinitiative,
   Spring: siSpring,
 };
@@ -43,6 +47,14 @@ const modules = [
     icon: siOpenjdk,
   },
   {
+    name: 'web',
+    title: 'Web',
+    text: '实时通信、文件上传、支付、Quartz、XXL-Job 与短信服务。',
+    href: '/web/文件上传/单文件上传',
+    count: '22 notes',
+    icon: siHtml5,
+  },
+  {
     name: 'api',
     title: 'API',
     text: '站点命令与 API 参考。',
@@ -58,6 +70,18 @@ const modules = [
     count: '40+ notes',
     icon: siSpring,
   },
+  {
+    name:'数据库',
+    title:'数据库',
+    href:'/数据库/Query',
+    icon:siSqlite
+  },
+  {
+    name:'Maven',
+    title:'Maven',
+    href:'/Maven/基础/1.安装与配置',
+    icon:siApachemaven
+  }
 ];
 
 function SimpleIconMark({ icon }: { icon: SimpleIcon }) {

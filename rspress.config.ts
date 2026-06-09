@@ -2,6 +2,32 @@ import * as path from 'node:path';
 import { defineConfig } from '@rspress/core';
 import pluginFileTree from 'rspress-plugin-file-tree';
 import mermaid from 'rspress-plugin-mermaid';
+import { visit } from 'unist-util-visit';
+
+function remarkNormalizeCodeLang() {
+  const aliasMap: Record<string, string> = {
+    SQL: 'sql',
+    JAVA: 'java',
+    'java[编译后]': 'java',
+    '[lombok.config]': 'properties',
+  };
+
+  return (tree: unknown) => {
+    visit(tree, 'code', (node: { lang?: string }) => {
+      if (!node.lang) {
+        return;
+      }
+
+      const normalizedLang =
+        aliasMap[node.lang] ??
+        (/^[A-Z0-9_+#-]+$/.test(node.lang) ? node.lang.toLowerCase() : undefined);
+
+      if (normalizedLang) {
+        node.lang = normalizedLang;
+      }
+    });
+  };
+}
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
@@ -16,25 +42,15 @@ export default defineConfig({
     mermaid(),
   ],
   markdown: {
+    remarkPlugins: [remarkNormalizeCodeLang],
     shiki: {
       langs: ['tsx', 'ts', 'js', 'java', 'properties'],
-      transformers: [
-        {
-          preprocess(code, { lang }) {
-            if (lang) {
-              const aliasMap: Record<string, string> = {
-                JAVA: 'java',
-                'java[编译后]': 'java',
-                '[lombok.config]': 'properties',
-              };
-              if (aliasMap[lang]) {
-                this.options.lang = aliasMap[lang];
-              }
-            }
-            return code;
-          },
-        },
-      ],
+      langAlias: {
+        SQL: 'sql',
+        JAVA: 'java',
+        'java[编译后]': 'java',
+        '[lombok.config]': 'properties',
+      },
     },
   },
   themeConfig: {
