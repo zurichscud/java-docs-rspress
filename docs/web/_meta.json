@@ -1,0 +1,23 @@
+[
+    {
+        "type": "dir",
+        "name": "文件上传"
+    },
+    {
+        "type": "dir",
+        "name": "支付"
+    },
+    {
+        "type": "dir",
+        "name": "实时通信"
+    },
+    {
+        "type": "dir",
+        "name": "短信服务"
+    },
+    {
+        "type": "dir",
+        "name": "定时任务",
+        "collapsed": true
+    }
+]

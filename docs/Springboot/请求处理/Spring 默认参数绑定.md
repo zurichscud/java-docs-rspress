@@ -1,0 +1,53 @@
+# Spring 默认参数绑定
+在 Spring Boot 中，Controller 的形参如果直接使用一个对象接收参数，Spring MVC 会根据请求类型、请求头、参数来源等自动进行“参数绑定（Data Binding）”。
+
+
+## GET请求
+
+```http
+GET /user?name=张三&age=18
+```
+
+Spring 会：
+
+1.获取 query 参数
+2.根据参数名匹配对象属性
+3.调用 setter
+4.自动类型转换
+
+
+## POST请求
+
+POST请求支持form-data / x-www-form-urlencoded两种方式
+```html
+<form>
+    <input name="name">
+    <input name="age">
+</form>
+```
+
+```java
+@PostMapping("/save")
+public String save(UserDTO dto)
+```
+
+```java
+@Data
+public class UploadDTO {
+
+    private String remark;
+
+    private MultipartFile file;
+}
+```
+
+## 对象绑定支持哪些来源
+Spring 会从这些地方尝试取值：
+| 来源        | 示例               |
+| --------- | ---------------- |
+| query 参数  | `?name=xx`       |
+| form 表单   | `name=xx`        |
+| path 参数   | `/user/1`        |
+| header    | `@RequestHeader` |
+| body JSON | `@RequestBody`   |
+| multipart | 文件上传             |
