@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "rspress build",
     "dev": "rspress dev",
+    "build": "rspress build",
     "preview": "rspress preview",
     "gen:recent-updates": "node scripts/generate-recent-updates.mjs"
   },

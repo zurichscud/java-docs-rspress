@@ -16,9 +16,9 @@ Spring 通过构造方法创建对象（还没注入属性）
 
 - 比如 `@Autowired`、`@Value`
 
-### Aware 回调
+### Aware 接口
 
-让 Bean 在创建过程中“拿到 Spring 容器的一些内部资源”（让 Bean 感知 Spring 容器环境）。
+让 Bean 在创建过程中“拿到 Spring 容器的环境参数”。
 
 | 接口                    | 作用             |
 | ----------------------- | ---------------- |
@@ -224,12 +224,6 @@ public class UserService implements DisposableBean {
 ## Java生命周期规范
 
 Java生命周期是规范（API、注解、接口）
-
-```java
-new UserService()
-```
-
-
 
 ### @PostConstruct
 
