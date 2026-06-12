@@ -801,3 +801,12 @@ li.rp-nav-menu__item::before {
     border-bottom: 0;
   }
 }
+
+.rp-doc-footer__edit {
+  gap: 16px;
+}
+
+.rp-doc-footer__edit .rp-last-updated {
+  margin-left: auto;
+  text-align: right;
+}

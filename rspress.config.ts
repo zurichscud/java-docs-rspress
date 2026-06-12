@@ -60,6 +60,7 @@ export default defineConfig({
     },
   },
   themeConfig: {
+    lastUpdated: true,
     socialLinks: [
       {
         icon: 'github',
