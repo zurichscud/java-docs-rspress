@@ -95,7 +95,6 @@ export function HomeLayout() {
                 </div>
                 <div className="home-doc-card__content">
                   <h3>{item.title}</h3>
-                  <p>{item.text}</p>
                 </div>
                 <div className="home-doc-card__footer">
                   <span>{item.count}</span>

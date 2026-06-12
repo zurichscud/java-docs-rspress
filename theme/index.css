@@ -465,7 +465,7 @@ li.rp-nav-menu__item::before {
   --card-accent: var(--home-accent-2);
   position: relative;
   display: block;
-  min-height: 236px;
+  min-height: 160px;
   overflow: hidden;
   border: 1px solid var(--home-line);
   border-radius: 8px;
@@ -538,7 +538,7 @@ li.rp-nav-menu__item::before {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 236px;
+  min-height: 160px;
   padding: 22px 24px 20px;
 }
 
@@ -683,7 +683,7 @@ li.rp-nav-menu__item::before {
   }
 
   .home-doc-card {
-    min-height: 232px;
+    min-height: 156px;
   }
 
   .home-section__header {
@@ -757,11 +757,11 @@ li.rp-nav-menu__item::before {
   }
 
   .home-doc-card {
-    min-height: 224px;
+    min-height: 148px;
   }
 
   .home-doc-card__body {
-    min-height: 224px;
+    min-height: 148px;
     padding: 22px;
   }
 
