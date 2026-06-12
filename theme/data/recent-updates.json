@@ -1,5 +1,180 @@
 [
   {
+    "title": "JSR-303",
+    "path": "docs/other/JSR-303/注解.md",
+    "href": "/other/JSR-303/注解",
+    "module": "other",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "注解",
+    "path": "docs/other/Lomok/注解.md",
+    "href": "/other/Lomok/注解",
+    "module": "other",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "全局配置文件",
+    "path": "docs/other/Lomok/全局配置文件.md",
+    "href": "/other/Lomok/全局配置文件",
+    "module": "other",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "AspectJ",
+    "path": "docs/Spring/面向切面编程/AspectJ.md",
+    "href": "/Spring/面向切面编程/AspectJ",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "Spring AOP",
+    "path": "docs/Spring/面向切面编程/SpringAOP.md",
+    "href": "/Spring/面向切面编程/SpringAOP",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "自动装配",
+    "path": "docs/Spring/自动装配.md",
+    "href": "/Spring/自动装配",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "set注入",
+    "path": "docs/Spring/XML开发/set注入.md",
+    "href": "/Spring/XML开发/set注入",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "构造注入",
+    "path": "docs/Spring/XML开发/构造注入.md",
+    "href": "/Spring/XML开发/构造注入",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "index",
+    "path": "docs/Spring/XML开发/index.md",
+    "href": "/Spring/XML开发/index",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "实例化对象",
+    "path": "docs/Spring/XML开发/实例化对象.md",
+    "href": "/Spring/XML开发/实例化对象",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "QuickStart",
+    "path": "docs/Spring/QuickStart.md",
+    "href": "/Spring/QuickStart",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "SpringUtils",
+    "path": "docs/Spring/SpringUtils.md",
+    "href": "/Spring/SpringUtils",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "Spring容器",
+    "path": "docs/Spring/Spring容器.md",
+    "href": "/Spring/Spring容器",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "@EventListener",
+    "path": "docs/Spring/API/EventListener.md",
+    "href": "/Spring/API/EventListener",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "生命周期",
+    "path": "docs/Spring/API/生命周期.md",
+    "href": "/Spring/API/生命周期",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "条件注解",
+    "path": "docs/Spring/注解开发/条件注解.md",
+    "href": "/Spring/注解开发/条件注解",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "依赖注入",
+    "path": "docs/Spring/注解开发/依赖注入.md",
+    "href": "/Spring/注解开发/依赖注入",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "实例化对象",
+    "path": "docs/Spring/注解开发/实例化对象.md",
+    "href": "/Spring/注解开发/实例化对象",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "Aware接口",
+    "path": "docs/Spring/Bean的生命周期/Aware.md",
+    "href": "/Spring/Bean的生命周期/Aware",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "Bean的生命周期",
+    "path": "docs/Spring/Bean的生命周期/index.md",
+    "href": "/Spring/Bean的生命周期/index",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "Java生命周期规范",
+    "path": "docs/Spring/Bean的生命周期/Java生命周期规范.md",
+    "href": "/Spring/Bean的生命周期/Java生命周期规范",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "Bean的作用域（scope）",
+    "path": "docs/Spring/Bean的作用域.md",
+    "href": "/Spring/Bean的作用域",
+    "module": "Spring",
+    "updatedAt": "2026-06-12 11:58"
+  },
+  {
+    "title": "文件库表设计",
+    "path": "docs/web/文件上传/文件库表设计.md",
+    "href": "/web/文件上传/文件库表设计",
+    "module": "web",
+    "updatedAt": "2026-06-11 17:55"
+  },
+  {
+    "title": "Springboot配置客户端",
+    "path": "docs/web/文件上传/OSS客户端配置.md",
+    "href": "/web/文件上传/OSS客户端配置",
+    "module": "web",
+    "updatedAt": "2026-06-11 17:55"
+  },
+  {
+    "title": "域名备案",
+    "path": "docs/web/域名备案.md",
+    "href": "/web/域名备案",
+    "module": "web",
+    "updatedAt": "2026-06-11 17:55"
+  },
+  {
     "title": "Spring 默认参数绑定",
     "path": "docs/Springboot/请求处理/Spring 默认参数绑定.md",
     "href": "/Springboot/请求处理/Spring 默认参数绑定",
@@ -18,13 +193,6 @@
     "path": "docs/Springboot/入门/3.主程序类.md",
     "href": "/Springboot/入门/3.主程序类",
     "module": "Springboot",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "文件库表设计",
-    "path": "docs/web/文件上传/文件库表设计.md",
-    "href": "/web/文件上传/文件库表设计",
-    "module": "web",
     "updatedAt": "2026-06-09 16:10"
   },
   {
@@ -124,111 +292,6 @@
     "href": "/web/定时任务/Quartz/2.Scheduler",
     "module": "web",
     "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "Bean的生命周期",
-    "path": "docs/Spring/Spring/Bean的生命周期.md",
-    "href": "/Spring/Spring/Bean的生命周期",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "set注入",
-    "path": "docs/Spring/Spring/set注入.md",
-    "href": "/Spring/Spring/set注入",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "条件注解",
-    "path": "docs/Spring/Spring/条件注解.md",
-    "href": "/Spring/Spring/条件注解",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "自动装配",
-    "path": "docs/Spring/Spring/自动装配.md",
-    "href": "/Spring/Spring/自动装配",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "构造注入",
-    "path": "docs/Spring/Spring/构造注入.md",
-    "href": "/Spring/Spring/构造注入",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "QuickStart",
-    "path": "docs/Spring/Spring/QuickStart.md",
-    "href": "/Spring/Spring/QuickStart",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "SpringUtils",
-    "path": "docs/Spring/Spring/SpringUtils.md",
-    "href": "/Spring/Spring/SpringUtils",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "AspectJ",
-    "path": "docs/Spring/Spring/AspectJ.md",
-    "href": "/Spring/Spring/AspectJ",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "Spring容器",
-    "path": "docs/Spring/Spring/Spring容器.md",
-    "href": "/Spring/Spring/Spring容器",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "补充",
-    "path": "docs/Spring/Spring/补充.md",
-    "href": "/Spring/Spring/补充",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "Spring AOP",
-    "path": "docs/Spring/Spring/SpringAOP.md",
-    "href": "/Spring/Spring/SpringAOP",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "注解创建Bean",
-    "path": "docs/Spring/Spring/注解创建Bean.md",
-    "href": "/Spring/Spring/注解创建Bean",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "Bean的实例化",
-    "path": "docs/Spring/Spring/Bean的实例化.md",
-    "href": "/Spring/Spring/Bean的实例化",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "Bean的作用域（scope）",
-    "path": "docs/Spring/Spring/Bean的作用域.md",
-    "href": "/Spring/Spring/Bean的作用域",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
-  },
-  {
-    "title": "注解依赖注入",
-    "path": "docs/Spring/Spring/注解依赖注入.md",
-    "href": "/Spring/Spring/注解依赖注入",
-    "module": "Spring",
-    "updatedAt": "2026-06-09 09:45"
   },
   {
     "title": "xAxis 为什么会被序列化成 xaxis",
@@ -669,13 +732,6 @@
     "path": "docs/api/index.mdx",
     "href": "/api/index",
     "module": "api",
-    "updatedAt": "2026-06-09 09:26"
-  },
-  {
-    "title": "全局配置文件",
-    "path": "docs/Spring/Lomok/全局配置文件.md",
-    "href": "/Spring/Lomok/全局配置文件",
-    "module": "Spring",
     "updatedAt": "2026-06-09 09:26"
   },
   {
@@ -1390,20 +1446,6 @@
     "path": "docs/JAVA/包机制.md",
     "href": "/JAVA/包机制",
     "module": "JAVA",
-    "updatedAt": "2026-06-06 21:55"
-  },
-  {
-    "title": "JSR-303",
-    "path": "docs/Spring/JSR-303/注解.md",
-    "href": "/Spring/JSR-303/注解",
-    "module": "Spring",
-    "updatedAt": "2026-06-06 21:55"
-  },
-  {
-    "title": "注解",
-    "path": "docs/Spring/Lomok/注解.md",
-    "href": "/Spring/Lomok/注解",
-    "module": "Spring",
     "updatedAt": "2026-06-06 21:55"
   },
   {
