@@ -1,6 +1,5 @@
-# 补充
 
-## @EventListener
+# @EventListener
 
 ```java
 @EventListener(ApplicationReadyEvent.class)

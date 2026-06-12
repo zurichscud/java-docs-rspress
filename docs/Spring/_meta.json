@@ -1,17 +1,46 @@
 [
   {
-    "type": "dir",
-    "name": "Spring",
-    "label": "Spring"
+    "type": "file",
+    "name": "QuickStart"
+  },
+  {
+    "type": "file",
+    "name": "Spring容器"
+  },
+  {
+    "type": "file",
+    "name": "自动装配"
+  },
+  {
+    "type": "file",
+    "name": "Bean的作用域"
   },
   {
     "type": "dir",
-    "name": "JSR-303",
-    "label": "JSR-303"
+    "name": "Bean的生命周期"
+  },
+  {
+    "type": "file",
+    "name": "SpringUtils"
   },
   {
     "type": "dir",
-    "name": "Lomok",
-    "label": "Lombok"
+    "name": "XML开发",
+    "label": "XML开发"
+  },
+  {
+    "type": "dir-section-header",
+    "name": "面向切面编程",
+    "label": "面向切面编程"
+  },
+  {
+    "type": "dir-section-header",
+    "name": "注解开发",
+    "label": "注解开发"
+  },
+  {
+    "type": "dir-section-header",
+    "name": "API",
+    "label": "API"
   }
 ]
