@@ -43,6 +43,9 @@ export default defineConfig({
   ],
   markdown: {
     remarkPlugins: [remarkNormalizeCodeLang],
+    link:{
+      checkDeadLinks:true
+    },
     shiki: {
       langs: ['tsx', 'ts', 'js', 'java', 'properties'],
       langAlias: {
@@ -58,7 +61,7 @@ export default defineConfig({
       {
         icon: 'github',
         mode: 'link',
-        content: 'https://github.com/web-infra-dev/rspress',
+        content: 'https://github.com/zurichscud/java-docs-rspress',
       },
     ],
   },
