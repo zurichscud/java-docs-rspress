@@ -46,6 +46,9 @@ export default defineConfig({
     link:{
       checkDeadLinks:true
     },
+    image:{
+      checkDeadImages:true
+    },
     shiki: {
       langs: ['tsx', 'ts', 'js', 'java', 'properties'],
       langAlias: {
