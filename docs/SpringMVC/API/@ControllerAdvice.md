@@ -1,17 +1,10 @@
 # @ControllerAdvice
 
-简单来说，它们是 Spring 框架提供的**全局切面（AOP）通知**，专门用来对 Controller 层进行增强。两者的关系极其类似于 `@Controller` 和 `@RestController`。
-
-## 核心区别
-
-> **`@RestControllerAdvice` = `@ControllerAdvice` + `@ResponseBody`**
-
-如果你去看 `@RestControllerAdvice` 的源码，会发现它身上直接套着 `@ControllerAdvice` 和 `@ResponseBody`。这意味着：
-
-- 使用 `@ControllerAdvice` 时，如果方法需要返回 JSON 数据，必须在方法上手动加 `@ResponseBody`。
-- 使用 `@RestControllerAdvice` 时，所有方法的返回值都会**自动**序列化为 JSON/XML 传输给前端。
+`@ControllerAdvice` 是一个非常强大的切面通知（AOP）注解。它主要用于定义全局性的、跨多个 Controller 的统一处理逻辑。最核心、最常用的场景就是**全局异常处理**
 
 ## 源码
+
+`@Component`：被`@ControllerAdvice` 接口标注的类将被注册为Spring组件
 
 ```java
 @Target(ElementType.TYPE)

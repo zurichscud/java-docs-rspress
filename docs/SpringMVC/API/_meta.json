@@ -1,0 +1,62 @@
+[
+  {
+    "type": "file",
+    "name": "ResponseEntity"
+  },
+  {
+    "type": "file",
+    "name": "RequestEntity"
+  },
+  {
+    "type": "file",
+    "name": "HttpMessageConverter"
+  },
+  {
+    "type": "file",
+    "name": "StringHttpMessageConverter"
+  },
+  {
+    "type": "file",
+    "name": "MappingJackson2HttpMessageConverter"
+  },
+  {
+    "type": "file",
+    "name": "RequestContextHolder"
+  },
+  {
+    "type": "file",
+    "name": "RequestBodyAdvice"
+  },
+  {
+    "type": "file",
+    "name": "ResponseBodyAdvice"
+  },
+  {
+    "type": "file",
+    "name": "@RequestBody"
+  },
+  {
+    "type": "file",
+    "name": "@ResponseBody"
+  },
+  {
+    "type": "file",
+    "name": "@RestController"
+  },
+  {
+    "type": "file",
+    "name": "@ControllerAdvice"
+  },
+  {
+    "type": "file",
+    "name": "@RestControllerAdvice"
+  },
+  {
+    "type": "file",
+    "name": "@ExceptionHandler"
+  },
+  {
+    "type": "file",
+    "name": "@CookieValue"
+  }
+]

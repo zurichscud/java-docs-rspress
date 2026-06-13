@@ -1,10 +1,10 @@
 # ResponseBodyAdvice
 
-在 Spring Boot / Java 后端开发中，`ResponseBodyAdvice` 是一个非常强大且实用的接口。简单来说，它是 Spring 框架提供的一个**拦截器钩子**，允许你在系统的 Controller（控制器）执行完成之后、但在响应体（Response Body）被写入 HTTP 响应之前，**拦截并修改**返回的数据。
+> 响应体拦截钩子
 
 如果你想要在项目里做**全局统一返回值包装**、**加密/解密**、或**统一日志打印**，它就是最佳选择。
 
-## 执行时机
+## 它在 Spring MVC 中的位置
 
 `ResponseBodyAdvice` 的工作契机介于 Controller 和 `HttpMessageConverter`（如 Jackson）之间。整个流程如下：
 
@@ -84,7 +84,7 @@ public interface ResponseBodyAdvice<T> {
 
 对返回体进行具体的修改逻辑
 
-## 示例
+## Example
 
 我们需要加上 `@ControllerAdvice` 或 `@RestControllerAdvice` 注解，Spring 才会将其注册为全局组件。
 
@@ -106,7 +106,7 @@ public class MyResponseBodyAdvice implements ResponseBodyAdvice<Object> {
                                   ServerHttpRequest request, 
                                   ServerHttpResponse response) {
         
-        // 关键大坑：如果 Controller 返回的是 String 类型，对应的转换器是 StringHttpMessageConverter
+        // 关键：如果 Controller 返回的是 String 类型，对应的转换器是 StringHttpMessageConverter
         // 如果直接返回 Result 对象，会导致类型转换异常 (ClassCastException)
         if (body instanceof String) {
             // 需要手动用 Jackson 序列化成 JSON 字符串返回
@@ -121,6 +121,6 @@ public class MyResponseBodyAdvice implements ResponseBodyAdvice<Object> {
 
 ::: danger String 类型的特殊处理
 
-如上面代码所示，Spring MVC 对 `String` 类型的返回值默认使用 `StringHttpMessageConverter`。如果你在 `beforeBodyWrite` 里返回了一个 `Result<String>` 对象，Spring 会尝试强转成 String 从而报错。**必须特殊处理，将其转为 JSON 字符串**，或者调整转换器的优先级。
+如果Controller的返回值是String，Spring将会选择StringHttpMessageConverter，这在进入ControllerAdvice之前就已经决定好了。如果你在 `beforeBodyWrite` 里返回了一个 `Result<String>` 对象，Spring 会尝试强转成 String 从而报错。**必须特殊处理，将其转为 JSON 字符串**，或者调整HttpMessageConverter的优先级。
 
 :::
