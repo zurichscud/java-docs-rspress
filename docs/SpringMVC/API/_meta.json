@@ -1,6 +1,10 @@
 [
   {
     "type": "file",
+    "name": "WebMvcConfigurer"
+  },
+  {
+    "type": "file",
     "name": "ResponseEntity"
   },
   {

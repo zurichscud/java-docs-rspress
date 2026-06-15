@@ -4,7 +4,7 @@
 
 
 
-## 核心工作流程
+## 接口方法
 
 Spring 拦截器的生命周期包含三个核心方法
 
@@ -27,6 +27,40 @@ Spring 拦截器的生命周期包含三个核心方法
 6. **`Interceptor A.afterCompletion()`** ->  执行（因为 A 之前放行了，需要让 A 清理资源）
 
 :::
+
+第三个参数 **`handler` 实际上就是“当前请求准备去调用的那个目标对象”**。
+
+虽然它的声明类型是 `Object`，但根据请求的不同，它通常会被实例化为以下两种主要类型：
+
+- `HandlerMethod` （最常见）
+
+当你请求一个普通的 Controller 接口时，`handler` 的实际类型就是 `HandlerMethod`。
+
+- **它包含了什么**：它包装了目标 **Controller 的 Bean 实例**、对应的 **Method 对象**、方法参数以及注解信息。
+
+- **能用来做什么**：你可以通过强转来获取方法上的注解，从而做权限控制或日志记录。
+
+```java
+if (handler instanceof HandlerMethod) {
+    HandlerMethod handlerMethod = (HandlerMethod) handler;
+    // 获取目标 Controller 的类名
+    String className = handlerMethod.getBeanType().getName();
+    // 获取目标方法名
+    String methodName = handlerMethod.getMethod().getName();
+    
+    // 比如：判断方法上有没有免登录注解 @NoAuth
+    NoAuth noAuth = handlerMethod.getMethodAnnotation(NoAuth.class);
+    if (noAuth != null) {
+        return true; // 放行
+    }
+}
+```
+
+- `ResourceHttpRequestHandler` （静态资源）
+
+当客户端请求的是**静态资源**（如 `/css/style.css`、`/js/app.js` 或图片）时，Spring 默认不会走 Controller 方法，而是由静态资源处理器来处理。此时 `handler` 的实际类型就是 `ResourceHttpRequestHandler`。
+
+
 
 ### postHandle
 
@@ -166,43 +200,6 @@ public void addInterceptors(InterceptorRegistry registry) {
 7. **`Interceptor B.afterCompletion()`** -> 执行
 8. **`Interceptor A.afterCompletion()`** -> 执行
 
-```
-【前端请求】 
-     │
-     ▼
- 1. 登录拦截器 (preHandle)  ── 如果没登录，直接这里拦截并返回
-     │
-     ▼
- 2. 权限拦截器 (preHandle)  ── 如果没权限，直接这里拦截并返回
-     │
-     ▼
-【 你的业务 Controller 】 ── 真正干活的地方
-     │
-     ▼
- 2. 权限拦截器 (afterCompletion) ── 业务干完了，反向经过这里
-     │
-     ▼
- 1. 登录拦截器 (afterCompletion) ── 业务干完了，反向经过这里
-     │
-     ▼
-【 返回前端响应 】
-```
 
 
-
-```
-开启事务
-    ↓
-记录时间
-    ↓
-记录日志
-
-Controller
-
-#这个顺序逻辑上是错误的：
-关闭事务
-输出耗时
-记录结束日志
-```
-
-在实际框架（比如 Spring MVC 的 `HandlerExecutionChain`）中，为了性能和方便管理，大家通常不用前面那种 `setNextHandler` 的链表方式了，而是用一个**数组（List）\**把所有拦截器装起来，通过\**下标循环**来实现责任链。
+>  在实际框架中，为了性能和方便管理，大家通常不用前面那种 `setNextHandler` 的链表方式了，而是用一个数组把所有拦截器装起来，通过下标循环来实现责任链。
