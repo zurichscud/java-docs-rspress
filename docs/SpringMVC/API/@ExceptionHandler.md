@@ -24,7 +24,7 @@ public class UserController {
 
 当 `test()` 抛出 `RuntimeException` 时会被：`@ExceptionHandler(RuntimeException.class)`标记的方法捕获
 
-多个异常
+## 匹配多个异常
 
 ```java
 @ExceptionHandler({
@@ -36,3 +36,8 @@ public String handle(Exception e) {
 }
 ```
 
+## 多个ExceptionHandler
+
+- Spring 会根据**异常类型的匹配程度**选择最合适的 `@ExceptionHandler`。
+
+- 如果存在多个匹配的`@ExceptionHandler`，Spring会选择更具体的ExceptionHandler

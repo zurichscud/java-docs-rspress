@@ -1,10 +1,10 @@
 # @ControllerAdvice
 
-`@ControllerAdvice` 是一个非常强大的切面通知（AOP）注解。它主要用于定义全局性的、跨多个 Controller 的统一处理逻辑。最核心、最常用的场景就是**全局异常处理**
+`@ControllerAdvice` 是 Spring 提供的一个**控制器增强器**，用于给多个 Controller 统一添加功能。
+
+被`@ControllerAdvice` 接口标注的类将被注册为Spring组件
 
 ## 源码
-
-`@Component`：被`@ControllerAdvice` 接口标注的类将被注册为Spring组件
 
 ```java
 @Target(ElementType.TYPE)

@@ -1,8 +1,6 @@
 # @RestControllerAdvice
 
-使用 `@ControllerAdvice` 时，如果方法需要返回 JSON 数据，必须在方法上手动加 `@ResponseBody`。我们可以使用
-
-`@RestControllerAdvice` ，本质上是一个组合注解：
+使用 `@ControllerAdvice` 时，如果方法需要返回 JSON 数据，必须在方法上手动加 `@ResponseBody`。我们可以使用`@RestControllerAdvice` ，本质上是一个组合注解：
 
 ```
 @ControllerAdvice
