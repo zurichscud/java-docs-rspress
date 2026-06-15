@@ -1,60 +1,133 @@
 # CORS
 
-跨域资源共享（Cross-Origin Resource Sharing，CORS）是一种机制，用于在浏览器中实现跨域请求访问资源的权限控制。当一个网页通过 XMLHttpRequest 或 Fetch API 发起跨域请求时，浏览器会根据同源策略（Same-Origin Policy）进行限制。
-
-
+当一个网站的 **JavaScript** 想要去请求另一个不同域名的服务器资源时，**浏览器**默认会出于安全考虑进行限制。CORS （Cross-Origin Resource Sharing，跨源资源共享）就是一套允许服务器声明“哪些源有权限访问我的资源”的标准机制。
 
 
 
 ## 同源策略
 
-**同源策略**是浏览器的一种安全机制，用来限制不同来源（origin）的网页之间互相访问数据。
+> **同源策略**是浏览器的一种安全机制，用来限制不同来源（origin）的网页之间互相访问数据。
 
-两个 URL **协议 + 域名 + 端口** 三者完全相同，才算同源。
+浏览器为了保护用户的隐私和数据安全，规定：**默认情况下，A 网站的脚本不能访问 B 网站的资源。**
+
+只有当两个 URL 的 **协议（Protocol）**、**域名（Domain）** 和 **端口（Port）** 完全相同时，才算同源。只要有一个不同，就是**跨源（跨域）**。
+
+假设当前网站是 `http://store.com/page.html`）：
+
+| **请求的 URL**                    | **是否同源** | **原因**                                   |
+| --------------------------------- | ------------ | ------------------------------------------ |
+| `http://store.com/dir/other.html` | **是**       | 协议、域名、端口完全一致                   |
+| `https://store.com/page.html`     | **否**       | 协议不同 (`http` vs `https`)               |
+| `http://news.store.com/page.html` | **否**       | 域名不同 (`store.com` vs `news.store.com`) |
+| `http://store.com:81/page.html`   | **否**       | 端口不同 (默认 `80` vs `81`)               |
+
+## 同源策略的触发时机
+
+浏览器允许某些资源跨域加载：
+
+```html
+<img>
+<script>
+<link>
+<video>
+<audio>
+```
+
+这些都允许跨域资源加载，浏览器不会进行拦截。
+
+当 JS 想读取跨域资源时。才会触发同源策略
 
 ```js
-www.example.com   api.example.com //域名不同，因此跨域
+fetch("https://b.com/user")
 ```
 
+::: tip 图片为什么不需要 同源策略？
+
+因为浏览器只是帮你下载并显示图片，但 JS 默认拿不到图片内容。所以浏览器认为风险较低。
+
+:::
+
+##  CORS 是如何工作的？
+
+虽然同源策略很安全，但在现代 Web 开发中（比如前后端分离，前端用 Vue 运行在 `localhost:8080`，后端用 Java 运行在 `localhost:8081`），跨域请求是刚需。
+
+浏览器在处理**跨域请求**时，会分为两种情况：
+
+### 简单请求
+
+满足特定条件（如使用 `GET`、`POST`、`HEAD` 方法，且 HTTP 头信息不超出常规范围）的请求。
+
+- **流程**：浏览器直接发送请求，但在请求头中自动加上 `Origin: http://localhost:8080`。
+- **服务器响应**：如果服务器同意，会在响应头中加上 `Access-Control-Allow-Origin: http://localhost:8080`（或者 `*`，代表允许所有人）。
+- **结果**：浏览器检查到这个响应头，就把数据交给前端；如果没有这个头，浏览器就会拦截响应并报错。
 
 
 
+任何自定义请求头或不符合CORS 简单请求安全列表的标准请求头都会导致浏览器认为该请求具有“潜在风险”
 
-`http://localhost:3001`存在如下网页：
+CORS 简单请求安全列表：
 
-```html [index.html]
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>127.0.0.1:3000</h1>
+| **请求头 (Header)**    | **限制条件与说明**                                           |
+| ---------------------- | ------------------------------------------------------------ |
+| User-Agent             | -                                                            |
+| Referer                | -                                                            |
+| Host                   | -                                                            |
+| Connection             | -                                                            |
+| **`Accept`**           | 告知服务器客户端可以处理的内容类型。通常无特殊限制。         |
+| **`Accept-Language`**  | 告知服务器客户端理解的语言。通常无特殊限制。                 |
+| **`Content-Language`** | 告知服务器请求体所使用的语言。通常无特殊限制。               |
+| **`Content-Type`**     | 仅限： 1. `application/x-www-form-urlencoded` 2. `multipart/form-data` 3. `text/plain` |
+| **`Range`**            | 仅限简单的字节范围值（例如 `bytes=128-255`）。               |
+| **`Viewport-Width`**   | 视口宽度（客户端提示，较少手动设置）。                       |
+| **`Width`**            | 图像宽度（客户端提示，较少手动设置）。                       |
+| **`DPR`**              | 屏幕像素比（客户端提示）。                                   |
+| **`Save-Data`**        | 告知服务器客户端是否开启了节流模式。                         |
 
-    <script>
-        fetch('http://localhost:3000/get')
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(err => console.log(err));
-    </script>
-    
-</body>
-</html>
-```
 
-浏览器访问`http://localhost:3001/index.html`控制台报错：
+
+### 预检请求
+
+凡是可能对服务器数据产生副作用的请求（如 `PUT`、`DELETE`，或者发送了 `application/json` 格式的数据），在正式通信之前，浏览器都会先发送一次 **OPTIONS** 请求，这被称为“预检”。
+
+- **流程**：
+  1. 浏览器先发一个 `OPTIONS` 请求：“喂，我想用 `POST` 发点 JSON 数据，你允许吗？”
+  2. 服务器回应：“可以，我允许来自该域名的 `POST` 请求。”
+  3. 浏览器收到肯定答复后，才真正发送业务请求。
+
+在实际开发中，几乎一定会触发预检：
+
+| **行为**          | **原因**                                               |
+| ----------------- | ------------------------------------------------------ |
+| **携带 Token**    | 设置了 `Authorization` 头部。                          |
+| **发送 JSON**     | 设置了 `Content-Type: application/json`。              |
+| **自定义 Header** | 比如公司规范要求的 `X-App-Version` 或 `X-Request-Id`。 |
+| **非简单方法**    | 使用 `PUT`、`DELETE`、`PATCH` 等方法。                 |
+
+
+
+### 预检请求缓存
+
+浏览器通常会 **缓存预检请求** 的结果，这样可以减少不必要的预检请求。具体来说，浏览器会缓存 CORS 预检请求的响应结果，默认缓存时间为 **5分钟**，你可以在响应头中使用 `Access-Control-Max-Age` 来设置缓存时间。
 
 ```js
-index.html:1 Access to fetch at 'http://localhost:3000/get' from origin 'http://localhost:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+Access-Control-Max-Age: 3600
 ```
 
-因为`http://localhost:3001`和`http://localhost:3000`不同源，因此请求`http://localhost:3000/get`被浏览器阻止
+如果预检请求已经被发送并成功响应，**在缓存有效期内**，浏览器就不会每次都发出预检请求，而是直接发送实际请求。这是为了减少网络开销和提高性能。
+
+::: tip 调试
+
+预检请求在全部类型的请求中可以看到。如果需要停用预检请求缓存，你可以在浏览器调试工具中勾选停用缓存
+
+:::
+
+
 
 ## 相关请求头
 
 ### Access-Control-Allow-Origin
+
+> 允许源
 
 - 只允许指定源访问
 
@@ -110,14 +183,21 @@ Access-Control-Request-Headers: authorization, x-token
 Origin: http://localhost:5173
 ```
 
+### Access-Control-Allow-Credentials
 
+是否允许浏览器在跨域请求中携带用户凭证（Credentials）：
+
+- Cookie
+- Session ID
+- HTTP认证信息（Basic Auth）
+- TLS客户端证书
 
 ## 解决
 
 ### 服务端
 
 
-在响应头中设置`Access-Control-Allow-Origin`即可
+CORS通常在服务端解决：
 
 ```js
 const express = require('express');
@@ -148,4 +228,14 @@ app.listen(3000, () => {
 });
 
 ```
+
+### Postman
+
+Postman 不会收到CORS的影响。
+
+- **跨域限制是浏览器的安全机制（Same-Origin Policy）**
+
+- Postman 不是浏览器，不会执行浏览器的同源策略检查，也不会发送`Origin`
+
+- 因此 Postman 可以直接向任何地址发送 HTTP 请求
 
