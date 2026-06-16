@@ -1,6 +1,6 @@
 # RequestEntity
 
-RequestEntity 是一个非常实用的类，它代表了一个完整的 HTTP 请求。它不仅包含了请求体（Body），还包含了请求头（Headers）、请求方法（HTTP Method）和目标 URL。
+RequestEntity 是一个非常实用的类，它代表了一个**完整的 HTTP 请求**。它不仅包含了请求体（Body），还包含了请求头（Headers）、请求方法（HTTP Method）和目标 URL。
 
 ## 在RestTemplate中使用
 

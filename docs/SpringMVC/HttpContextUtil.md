@@ -1,5 +1,7 @@
 # HttpContextUtil
 
+使用 RequestContextHolder避免api侵入式设计
+
 ```java
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -136,4 +138,3 @@ public class HttpContextUtil {
     }
 }
 ```
-

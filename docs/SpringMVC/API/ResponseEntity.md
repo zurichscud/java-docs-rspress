@@ -1,6 +1,6 @@
 # ResponseEntity
 
-ResponseEntity 是一个非常核心的类，它用于代表整个 HTTP 响应。
+ResponseEntity 是一个非常核心的类，它用于代表**完整的 HTTP 响应**。
 
 简单来说，通过它，你不仅可以控制返回给前端的数据（Body），还能自由地设置 HTTP 状态码（Status Code） 和 响应头（Headers）。
 

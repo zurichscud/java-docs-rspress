@@ -10,5 +10,5 @@
 
 ## Example
 
-RequestBodyAdvice 同样需要配合 @ControllerAdvice（或 @RestControllerAdvice）使用。它专门用来拦截使用`@RequestBody `注解的参数。
+RequestBodyAdvice 同样需要配合 `@ControllerAdvice`（或 `@RestControllerAdvice`）使用。它专门用来拦截使用`@RequestBody `注解的参数。
 
