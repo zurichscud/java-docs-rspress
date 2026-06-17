@@ -37,6 +37,10 @@
   },
   {
     "type": "file",
+    "name": "DefaultErrorAttributes"
+  },
+  {
+    "type": "file",
     "name": "@RequestBody"
   },
   {

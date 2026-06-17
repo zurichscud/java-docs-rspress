@@ -124,3 +124,25 @@ public class MyResponseBodyAdvice implements ResponseBodyAdvice<Object> {
 如果Controller的返回值是String，Spring将会选择StringHttpMessageConverter，这在进入ControllerAdvice之前就已经决定好了。如果你在 `beforeBodyWrite` 里返回了一个 `Result<String>` 对象，Spring 会尝试强转成 String 从而报错。**必须特殊处理，将其转为 JSON 字符串**，或者调整HttpMessageConverter的优先级。
 
 :::
+
+## 为什么默认情况下 404 不走 `ResponseBodyAdvice`？
+
+结合我们前面聊到的生命周期，原因其实很简单：
+
+1. 当一个找不到匹配的 URL 请求进来时，Spring MVC 无法为它匹配到任何 Controller 的方法（Handler）。
+2. 既然连 Controller 方法都没有，那就根本谈不上执行方法，更**无法拿到方法的返回值**。
+3. `ResponseBodyAdvice` 的本质是**拦截 Controller 方法的返回值**。所以它直接被绕过了。
+4. 随后，请求被默默转发给了 Spring Boot 自带的兜底大管家 `/error`（即 `BasicErrorController`）。
+
+> **等等，`BasicErrorController` 不也是个 Controller 吗？为什么它不触发 `ResponseBodyAdvice`？** 因为我们在声明 `ResponseBodyAdvice` 时，通常会加上限制条件，比如指定了扫描包名 `@RestControllerAdvice(basePackages = "com.example.controller")`。而 `BasicErrorController` 属于 Spring 框架自己的包（`org.springframework.boot...`），自然就被你排除在外了。
+
+
+
+对于 **404 找不到接口**：默认情况下，Spring MVC 会直接让 Tomcat 响应 404（走阶段一的 `/error`）。如果你希望 404 也能被你的 `@ExceptionHandler` 捕获，你需要在 `application.yml` 中开启配置：
+
+```
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true # 找不到 Handler 时抛出异常
+```
+

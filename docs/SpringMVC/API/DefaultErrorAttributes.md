@@ -80,3 +80,10 @@ public class CustomErrorAttributes extends DefaultErrorAttributes {
 }
 ```
 
+
+
+::: warning
+
+404报错是Springboot内置的Controller处理的，因此不会被ResponseBodyAdvice处理
+
+:::

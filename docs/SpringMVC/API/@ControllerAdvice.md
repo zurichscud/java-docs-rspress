@@ -71,3 +71,4 @@ public @interface ControllerAdvice {
 
 ```
 
+- basePackages：`basePackages` 允许你指定一个或多个包名，只有这些包下的 Controller 抛出的异常或返回的数据，才会触发该 Advice。

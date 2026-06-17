@@ -154,6 +154,12 @@ public class LogAspect {
 - returning：方法返回值的占位符，方法参数里必须有同名变量
 - pointcut/value：切点
 
+::: warning
+
+`@AfterReturning`无法改变方法最终返回值。
+
+:::
+
 ### Around
 
 环绕通知，我们需要手动调用目标方法，否则将不会执行
