@@ -80,6 +80,17 @@ paramMap.put("userId", new String[]{"123"}); // ❌ 会直接抛出异常！
 
 
 
+## getParts
+
+当表单以 `enctype="multipart/form-data"` 提交时，请求体会被切分成多个部分（Parts）。
+
+- **普通表单文本字段**（如 `username`）会是一个 Part。
+- **上传的文件**（如 `avatar.png`）也会是一个 Part。
+
+`getParts()` 的返回值是 `Collection<Part>`，它包含了这次请求中的所有部分。
+
+
+
 ## Header
 
 **`request.getHeader(String name)`**：最常用。获取指定名称的请求头的值（如获取 Token）。
