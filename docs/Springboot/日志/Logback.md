@@ -1,48 +1,39 @@
 # Logback
 
-## Logger
+Springboot默认使用Logback作为日志框架
 
-### 日志级别（level）
+## 默认配置
 
-```java
-TRACE < DEBUG < INFO < WARN < ERROR
+### spring-boot-starter-logging
+
+- 核心场景启动器`spring-boot-starter`中引入了`spring-boot-starter-logging`
+- Spring Boot 默认日志体系：SLF4J（接口） + Logback（实现）
+- 默认日志级别是INFO
+- 日志是系统一旦启动就要使用，因此日志依赖没有使用`AutoConfiguration`，而是使用了`ApplicationListener`
+
+### 日志格式
+
+当你启动一个 Spring Boot 项目时，控制台通常会打印出类似这样的日志：
+
+```sh
+2026-07-01 17:52:30.123  INFO 12345 --- [main] c.e.demo.DemoApplication : Started DemoApplication in 1.5 seconds
 ```
 
-如果日志级别是INFO，则日志包含INFO、WARN、ERROR。
-
-我们可以指定项目中不同文件的日志级别。root表示整个项目的日志级别，日志级别采用局部优先策略
-
-```yaml [application.yaml]
-logging:
-  level:
-    root: debug
-    org.springframework: warn
-    com.claims: debug
-```
+| **示例内容**                       | **对应含义**   | **占位符（Pattern）**         | **说明**                                                     |
+| ---------------------------------- | -------------- | ----------------------------- | ------------------------------------------------------------ |
+| **`2026-07-01 17:52:30.123`**      | 日期与时间     | `%d{yyyy-MM-dd HH:mm:ss.SSS}` | 精确到毫秒。                                                 |
+| **`INFO`**                         | 日志级别       | `%-5level`                    | 占 5 个字符宽度，左对齐（ERROR, WARN, INFO, DEBUG, TRACE）。 |
+| **`12345`**                        | 进程 ID (PID)  | `${PID:-}`                    | 当前运行的 Java 进程号。                                     |
+| **`---`**                          | 分隔符         | `---`                         | 纯粹的视觉分隔符，没有实际含义。                             |
+| **`[main]`**                       | 线程名称       | `[%thread]`                   | 产生该日志的线程，外层用方括号包裹。                         |
+| **`c.e.demo.DemoApplication`**     | 产生日志的类名 | `%logger{36}`                 | 通常是类的全限定名，默认会进行缩写（长度限制 36）。          |
+| **`: Started DemoApplication...`** | 日志具体消息   | `%msg%n`                      | 冒号后跟实际打印的文本，最后 `%n` 换行。                     |
 
 
 
-## appender
+## 配置项
 
-**appender（输出器）** 是日志系统的一个核心组件
-
-```java
-logger（记录日志） → appender（输出日志） → 输出目标（文件/控制台/远程等）
-```
-
-
-
-## 配置文件
-
-### application.yaml
-
-yaml 并不可以完全替代 logback的配置文件，yaml 只是“简化入口”，不是完整配置。
-
-::: warning
-
-application.yaml的优先级会比XML的优先级高
-
-:::
+application.yaml
 
 ```yaml
 # 控制日志级别
@@ -51,6 +42,14 @@ logging:
     root: info
     com.xxx: debug
 ```
+
+
+
+
+
+## 配置文件
+
+yaml 并不可以完全替代 logback的配置文件，yaml 只是“简化入口”，不是完整配置。但是application.yaml的优先级会比XML的优先级高
 
 
 
@@ -72,11 +71,9 @@ Logback的配置文件
 </springProfile>
 ```
 
-## 日志文件
-
-对于开发环境，当前路径是项目根路径
-
 ## 最佳实践
+
+`logback-spring.xml` ：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
