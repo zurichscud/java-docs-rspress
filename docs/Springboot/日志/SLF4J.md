@@ -99,9 +99,9 @@ ConsoleAppender（控制台输出）
 
 ### AsyncAppender
 
-在默认情况下，Logback 或 Log4j2 的 Appender（比如 ConsoleAppender 或 FileAppender）都是同步（Synchronous）的。
+在默认情况下，ConsoleAppender 或 FileAppender都是同步的。
 
-这意味着，当你的代码执行到 logger.info() 时，当前线程（处理用户请求的业务线程）必须停下来，等待日志框架完成以下一系列操作：
+这意味着，当你的代码执行到` logger.info()` 时，当前线程（处理用户请求的业务线程）必须停下来，等待日志框架完成以下一系列操作：
 
 1. 组装日志字符串。
 
