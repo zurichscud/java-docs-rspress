@@ -42,7 +42,7 @@ export const modules: ModuleItem[] = [
   },
   {
     name: "web应用",
-    title: "Web",
+    title: "Web APP",
     href: "/web应用/文件上传/简单上传",
     count: "22 notes",
     icon: siHtml5,

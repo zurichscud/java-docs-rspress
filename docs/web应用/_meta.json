@@ -19,5 +19,13 @@
         "type": "dir",
         "name": "定时任务",
         "collapsed": true
+    },
+    {
+        "type": "dir",
+        "name": "邮箱服务"
+    },
+    {
+        "type": "file",
+        "name": "域名备案"
     }
 ]
