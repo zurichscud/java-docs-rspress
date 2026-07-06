@@ -1,0 +1,18 @@
+[
+  {
+    "type": "file",
+    "name": "配置文件"
+  },
+  {
+    "type": "file",
+    "name": "属性绑定"
+  },
+  {
+    "type": "file",
+    "name": "主程序类"
+  },
+  {
+    "type": "file",
+    "name": "自动配置"
+  }
+]

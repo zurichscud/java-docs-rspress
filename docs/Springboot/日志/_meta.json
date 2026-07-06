@@ -1,0 +1,10 @@
+[
+  {
+    "type": "file",
+    "name": "SLF4J"
+  },
+  {
+    "type": "file",
+    "name": "Logback"
+  }
+]

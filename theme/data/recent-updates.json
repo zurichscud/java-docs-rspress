@@ -1,43 +1,561 @@
 [
   {
-    "title": "拦截器",
-    "path": "docs/SpringMVC/Interceptor.md",
-    "href": "/SpringMVC/Interceptor",
-    "module": "SpringMVC",
-    "updatedAt": "2026-06-14 01:26"
+    "title": "LLM",
+    "path": "docs/AGENT/LLM.md",
+    "href": "/AGENT/LLM",
+    "module": "AGENT",
+    "updatedAt": "2026-07-03 17:59"
   },
   {
-    "title": "责任链模式(洋葱模型)",
-    "path": "docs/SpringMVC/责任链模式.md",
-    "href": "/SpringMVC/责任链模式",
+    "title": "HTTP缓存机制",
+    "path": "docs/Springboot/web/HTTP缓存机制.md",
+    "href": "/Springboot/web/HTTP缓存机制",
+    "module": "Springboot",
+    "updatedAt": "2026-07-01 17:54"
+  },
+  {
+    "title": "静态资源规则",
+    "path": "docs/Springboot/web/静态资源规则.md",
+    "href": "/Springboot/web/静态资源规则",
+    "module": "Springboot",
+    "updatedAt": "2026-07-01 17:54"
+  },
+  {
+    "title": "SLF4J",
+    "path": "docs/Springboot/日志/SLF4J.md",
+    "href": "/Springboot/日志/SLF4J",
+    "module": "Springboot",
+    "updatedAt": "2026-07-01 17:54"
+  },
+  {
+    "title": "主程序类",
+    "path": "docs/Springboot/自动配置/主程序类.md",
+    "href": "/Springboot/自动配置/主程序类",
+    "module": "Springboot",
+    "updatedAt": "2026-07-01 17:01"
+  },
+  {
+    "title": "属性绑定",
+    "path": "docs/Springboot/外部化配置/属性绑定.md",
+    "href": "/Springboot/外部化配置/属性绑定",
+    "module": "Springboot",
+    "updatedAt": "2026-07-01 17:01"
+  },
+  {
+    "title": "配置文件",
+    "path": "docs/Springboot/外部化配置/配置文件.md",
+    "href": "/Springboot/外部化配置/配置文件",
+    "module": "Springboot",
+    "updatedAt": "2026-07-01 17:01"
+  },
+  {
+    "title": "Logback",
+    "path": "docs/Springboot/日志/Logback.md",
+    "href": "/Springboot/日志/Logback",
+    "module": "Springboot",
+    "updatedAt": "2026-07-01 17:01"
+  },
+  {
+    "title": "条件注解",
+    "path": "docs/Spring/注解开发/条件注解.md",
+    "href": "/Spring/注解开发/条件注解",
+    "module": "Spring",
+    "updatedAt": "2026-07-01 17:01"
+  },
+  {
+    "title": "实例化对象",
+    "path": "docs/Spring/注解开发/实例化对象.md",
+    "href": "/Spring/注解开发/实例化对象",
+    "module": "Spring",
+    "updatedAt": "2026-07-01 17:01"
+  },
+  {
+    "title": "HttpServletRequest",
+    "path": "docs/SpringMVC/API/HttpServletRequest.md",
+    "href": "/SpringMVC/API/HttpServletRequest",
     "module": "SpringMVC",
-    "updatedAt": "2026-06-14 01:26"
+    "updatedAt": "2026-06-24 18:01"
+  },
+  {
+    "title": "异步请求",
+    "path": "docs/SpringMVC/异步请求.md",
+    "href": "/SpringMVC/异步请求",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-21 21:38"
+  },
+  {
+    "title": "请求日志过滤器",
+    "path": "docs/SpringMVC/应用/请求日志过滤器.md",
+    "href": "/SpringMVC/应用/请求日志过滤器",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-21 21:38"
+  },
+  {
+    "title": "Filter",
+    "path": "docs/SpringMVC/API/Filter.md",
+    "href": "/SpringMVC/API/Filter",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-21 21:38"
+  },
+  {
+    "title": "解决重复读取请求体",
+    "path": "docs/SpringMVC/解决重复读取请求体.md",
+    "href": "/SpringMVC/解决重复读取请求体",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-21 21:38"
+  },
+  {
+    "title": "AspectJ",
+    "path": "docs/Spring/面向切面编程/AspectJ.md",
+    "href": "/Spring/面向切面编程/AspectJ",
+    "module": "Spring",
+    "updatedAt": "2026-06-17 18:00"
+  },
+  {
+    "title": "过滤器",
+    "path": "docs/SpringMVC/Filter.md",
+    "href": "/SpringMVC/Filter",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 18:00"
   },
   {
     "title": "异常处理",
     "path": "docs/SpringMVC/异常处理.md",
     "href": "/SpringMVC/异常处理",
     "module": "SpringMVC",
-    "updatedAt": "2026-06-14 01:26"
+    "updatedAt": "2026-06-17 18:00"
+  },
+  {
+    "title": "响应设计",
+    "path": "docs/SpringMVC/响应设计.md",
+    "href": "/SpringMVC/响应设计",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 18:00"
+  },
+  {
+    "title": "Restful风格",
+    "path": "docs/SpringMVC/Restful.md",
+    "href": "/SpringMVC/Restful",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 18:00"
+  },
+  {
+    "title": "@ExceptionHandler",
+    "path": "docs/SpringMVC/API/@ExceptionHandler.md",
+    "href": "/SpringMVC/API/@ExceptionHandler",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 18:00"
+  },
+  {
+    "title": "ResponseBodyAdvice",
+    "path": "docs/SpringMVC/API/ResponseBodyAdvice.md",
+    "href": "/SpringMVC/API/ResponseBodyAdvice",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 18:00"
+  },
+  {
+    "title": "@ControllerAdvice",
+    "path": "docs/SpringMVC/API/@ControllerAdvice.md",
+    "href": "/SpringMVC/API/@ControllerAdvice",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 18:00"
+  },
+  {
+    "title": "DefaultErrorAttributes",
+    "path": "docs/SpringMVC/API/DefaultErrorAttributes.md",
+    "href": "/SpringMVC/API/DefaultErrorAttributes",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 18:00"
+  },
+  {
+    "title": "Converter",
+    "path": "docs/SpringMVC/API/Converter.md",
+    "href": "/SpringMVC/API/Converter",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 18:00"
+  },
+  {
+    "title": "请求与响应流转",
+    "path": "docs/SpringMVC/请求与响应流转.md",
+    "href": "/SpringMVC/请求与响应流转",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 18:00"
+  },
+  {
+    "title": "RBAC",
+    "path": "docs/SpringMVC/RBAC.md",
+    "href": "/SpringMVC/RBAC",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 18:00"
   },
   {
     "title": "HttpContextUtil",
     "path": "docs/SpringMVC/HttpContextUtil.md",
     "href": "/SpringMVC/HttpContextUtil",
     "module": "SpringMVC",
-    "updatedAt": "2026-06-14 01:26"
-  },
-  {
-    "title": "转发与重定向",
-    "path": "docs/SpringMVC/转发与重定向.md",
-    "href": "/SpringMVC/转发与重定向",
-    "module": "SpringMVC",
-    "updatedAt": "2026-06-14 01:26"
+    "updatedAt": "2026-06-17 00:31"
   },
   {
     "title": "ResponseEntity",
     "path": "docs/SpringMVC/API/ResponseEntity.md",
     "href": "/SpringMVC/API/ResponseEntity",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 00:31"
+  },
+  {
+    "title": "RequestEntity",
+    "path": "docs/SpringMVC/API/RequestEntity.md",
+    "href": "/SpringMVC/API/RequestEntity",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 00:31"
+  },
+  {
+    "title": "RequestBodyAdvice",
+    "path": "docs/SpringMVC/API/RequestBodyAdvice.md",
+    "href": "/SpringMVC/API/RequestBodyAdvice",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 00:31"
+  },
+  {
+    "title": "API接口分离",
+    "path": "docs/SpringMVC/API接口分离.md",
+    "href": "/SpringMVC/API接口分离",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-17 00:31"
+  },
+  {
+    "title": "请求",
+    "path": "docs/web/安全/请求.md",
+    "href": "/web/安全/请求",
+    "module": "web",
+    "updatedAt": "2026-06-15 17:55"
+  },
+  {
+    "title": "防盗链",
+    "path": "docs/web/安全/防盗链.md",
+    "href": "/web/安全/防盗链",
+    "module": "web",
+    "updatedAt": "2026-06-15 17:55"
+  },
+  {
+    "title": "@RestControllerAdvice",
+    "path": "docs/SpringMVC/API/@RestControllerAdvice.md",
+    "href": "/SpringMVC/API/@RestControllerAdvice",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-15 17:55"
+  },
+  {
+    "title": "Cookie",
+    "path": "docs/web/安全/Cookie.md",
+    "href": "/web/安全/Cookie",
+    "module": "web",
+    "updatedAt": "2026-06-15 16:46"
+  },
+  {
+    "title": "JWT",
+    "path": "docs/web/安全/JWT.md",
+    "href": "/web/安全/JWT",
+    "module": "web",
+    "updatedAt": "2026-06-15 16:46"
+  },
+  {
+    "title": "网关",
+    "path": "docs/web/安全/网关.md",
+    "href": "/web/安全/网关",
+    "module": "web",
+    "updatedAt": "2026-06-15 16:46"
+  },
+  {
+    "title": "CORS",
+    "path": "docs/web/安全/CORS.md",
+    "href": "/web/安全/CORS",
+    "module": "web",
+    "updatedAt": "2026-06-15 16:46"
+  },
+  {
+    "title": "响应",
+    "path": "docs/web/安全/响应.md",
+    "href": "/web/安全/响应",
+    "module": "web",
+    "updatedAt": "2026-06-15 16:46"
+  },
+  {
+    "title": "Session",
+    "path": "docs/web/安全/Session.md",
+    "href": "/web/安全/Session",
+    "module": "web",
+    "updatedAt": "2026-06-15 16:46"
+  },
+  {
+    "title": "对称加密（AES）",
+    "path": "docs/web/加密/对称加密.md",
+    "href": "/web/加密/对称加密",
+    "module": "web",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "HTTPS",
+    "path": "docs/web/加密/HTTPS.md",
+    "href": "/web/加密/HTTPS",
+    "module": "web",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "哈希函数",
+    "path": "docs/web/加密/哈希函数.md",
+    "href": "/web/加密/哈希函数",
+    "module": "web",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "非对称加密（RSA）",
+    "path": "docs/web/加密/非对称加密.md",
+    "href": "/web/加密/非对称加密",
+    "module": "web",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "Cache-Control",
+    "path": "docs/web/安全/Cache-Control.md",
+    "href": "/web/安全/Cache-Control",
+    "module": "web",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "文件库表设计",
+    "path": "docs/web应用/文件上传/文件库表设计.md",
+    "href": "/web应用/文件上传/文件库表设计",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "分片上传（Multipart Upload）",
+    "path": "docs/web应用/文件上传/分片上传.md",
+    "href": "/web应用/文件上传/分片上传",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "MultipartFile",
+    "path": "docs/web应用/文件上传/MultipartFile.md",
+    "href": "/web应用/文件上传/MultipartFile",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "Springboot配置客户端",
+    "path": "docs/web应用/文件上传/OSS客户端配置.md",
+    "href": "/web应用/文件上传/OSS客户端配置",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "单文件上传",
+    "path": "docs/web应用/文件上传/简单上传.md",
+    "href": "/web应用/文件上传/简单上传",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "断点续传",
+    "path": "docs/web应用/文件上传/断点续传.md",
+    "href": "/web应用/文件上传/断点续传",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "谁上传至OSS",
+    "path": "docs/web应用/文件上传/谁上传至OSS.md",
+    "href": "/web应用/文件上传/谁上传至OSS",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "域名备案",
+    "path": "docs/web应用/域名备案.md",
+    "href": "/web应用/域名备案",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "HTTP轮询",
+    "path": "docs/web应用/实时通信/HTTP轮询.md",
+    "href": "/web应用/实时通信/HTTP轮询",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "WebSocket",
+    "path": "docs/web应用/实时通信/WebSocket.md",
+    "href": "/web应用/实时通信/WebSocket",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "SSE",
+    "path": "docs/web应用/实时通信/SSE.md",
+    "href": "/web应用/实时通信/SSE",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "微信支付",
+    "path": "docs/web应用/支付/微信支付.md",
+    "href": "/web应用/支付/微信支付",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "基本概念",
+    "path": "docs/web应用/支付/基本概念.md",
+    "href": "/web应用/支付/基本概念",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "微信网页授权",
+    "path": "docs/web应用/支付/微信网页授权.md",
+    "href": "/web应用/支付/微信网页授权",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "原理",
+    "path": "docs/web应用/定时任务/XXL-Job/原理.md",
+    "href": "/web应用/定时任务/XXL-Job/原理",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "QuickStart",
+    "path": "docs/web应用/定时任务/XXL-Job/QuickStart.md",
+    "href": "/web应用/定时任务/XXL-Job/QuickStart",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "集群化",
+    "path": "docs/web应用/定时任务/XXL-Job/集群化.md",
+    "href": "/web应用/定时任务/XXL-Job/集群化",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "调度中心",
+    "path": "docs/web应用/定时任务/XXL-Job/调度中心.md",
+    "href": "/web应用/定时任务/XXL-Job/调度中心",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "Job",
+    "path": "docs/web应用/定时任务/Quartz/3.Job.md",
+    "href": "/web应用/定时任务/Quartz/3.Job",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "持久化",
+    "path": "docs/web应用/定时任务/Quartz/7.持久化.md",
+    "href": "/web应用/定时任务/Quartz/7.持久化",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "Trigger",
+    "path": "docs/web应用/定时任务/Quartz/4.Trigger.md",
+    "href": "/web应用/定时任务/Quartz/4.Trigger",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "Listener",
+    "path": "docs/web应用/定时任务/Quartz/6.Listener.md",
+    "href": "/web应用/定时任务/Quartz/6.Listener",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "Misfire",
+    "path": "docs/web应用/定时任务/Quartz/5.Misfire.md",
+    "href": "/web应用/定时任务/Quartz/5.Misfire",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "基本原理",
+    "path": "docs/web应用/定时任务/Quartz/1.基本原理.md",
+    "href": "/web应用/定时任务/Quartz/1.基本原理",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "Scheduler",
+    "path": "docs/web应用/定时任务/Quartz/2.Scheduler.md",
+    "href": "/web应用/定时任务/Quartz/2.Scheduler",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "签名（SignName）",
+    "path": "docs/web应用/短信服务/签名.md",
+    "href": "/web应用/短信服务/签名",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "资质",
+    "path": "docs/web应用/短信服务/资质.md",
+    "href": "/web应用/短信服务/资质",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "发送",
+    "path": "docs/web应用/短信服务/发送.md",
+    "href": "/web应用/短信服务/发送",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "模板",
+    "path": "docs/web应用/短信服务/模板.md",
+    "href": "/web应用/短信服务/模板",
+    "module": "web应用",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "拦截器",
+    "path": "docs/SpringMVC/Interceptor.md",
+    "href": "/SpringMVC/Interceptor",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "责任链模式(洋葱模型)",
+    "path": "docs/SpringMVC/责任链模式.md",
+    "href": "/SpringMVC/责任链模式",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "WebMvcConfigurer",
+    "path": "docs/SpringMVC/API/WebMvcConfigurer.md",
+    "href": "/SpringMVC/API/WebMvcConfigurer",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "跨域设计",
+    "path": "docs/SpringMVC/跨域设计.md",
+    "href": "/SpringMVC/跨域设计",
+    "module": "SpringMVC",
+    "updatedAt": "2026-06-15 11:57"
+  },
+  {
+    "title": "转发与重定向",
+    "path": "docs/SpringMVC/转发与重定向.md",
+    "href": "/SpringMVC/转发与重定向",
     "module": "SpringMVC",
     "updatedAt": "2026-06-14 01:26"
   },
@@ -56,20 +574,6 @@
     "updatedAt": "2026-06-14 01:26"
   },
   {
-    "title": "ResponseBodyAdvice",
-    "path": "docs/SpringMVC/API/ResponseBodyAdvice.md",
-    "href": "/SpringMVC/API/ResponseBodyAdvice",
-    "module": "SpringMVC",
-    "updatedAt": "2026-06-14 01:26"
-  },
-  {
-    "title": "@ControllerAdvice",
-    "path": "docs/SpringMVC/API/@ControllerAdvice.md",
-    "href": "/SpringMVC/API/@ControllerAdvice",
-    "module": "SpringMVC",
-    "updatedAt": "2026-06-14 01:26"
-  },
-  {
     "title": "StringHttpMessageConverter",
     "path": "docs/SpringMVC/API/StringHttpMessageConverter.md",
     "href": "/SpringMVC/API/StringHttpMessageConverter",
@@ -80,34 +584,6 @@
     "title": "@RequestBody",
     "path": "docs/SpringMVC/API/@RequestBody.md",
     "href": "/SpringMVC/API/@RequestBody",
-    "module": "SpringMVC",
-    "updatedAt": "2026-06-14 01:26"
-  },
-  {
-    "title": "RequestEntity",
-    "path": "docs/SpringMVC/API/RequestEntity.md",
-    "href": "/SpringMVC/API/RequestEntity",
-    "module": "SpringMVC",
-    "updatedAt": "2026-06-14 01:26"
-  },
-  {
-    "title": "RequestBodyAdvice",
-    "path": "docs/SpringMVC/API/RequestBodyAdvice.md",
-    "href": "/SpringMVC/API/RequestBodyAdvice",
-    "module": "SpringMVC",
-    "updatedAt": "2026-06-14 01:26"
-  },
-  {
-    "title": "@RestControllerAdvice",
-    "path": "docs/SpringMVC/API/@RestControllerAdvice.md",
-    "href": "/SpringMVC/API/@RestControllerAdvice",
-    "module": "SpringMVC",
-    "updatedAt": "2026-06-14 01:26"
-  },
-  {
-    "title": "请求与响应流转",
-    "path": "docs/SpringMVC/请求与响应流转.md",
-    "href": "/SpringMVC/请求与响应流转",
     "module": "SpringMVC",
     "updatedAt": "2026-06-14 01:26"
   },
@@ -140,23 +616,9 @@
     "updatedAt": "2026-06-12 17:38"
   },
   {
-    "title": "响应设计",
-    "path": "docs/SpringMVC/响应设计.md",
-    "href": "/SpringMVC/响应设计",
-    "module": "SpringMVC",
-    "updatedAt": "2026-06-12 17:38"
-  },
-  {
     "title": "RequestContextHolder",
     "path": "docs/SpringMVC/API/RequestContextHolder.md",
     "href": "/SpringMVC/API/RequestContextHolder",
-    "module": "SpringMVC",
-    "updatedAt": "2026-06-12 17:38"
-  },
-  {
-    "title": "@ExceptionHandler",
-    "path": "docs/SpringMVC/API/@ExceptionHandler.md",
-    "href": "/SpringMVC/API/@ExceptionHandler",
     "module": "SpringMVC",
     "updatedAt": "2026-06-12 17:38"
   },
@@ -175,13 +637,6 @@
     "updatedAt": "2026-06-12 14:47"
   },
   {
-    "title": "条件注解",
-    "path": "docs/Spring/注解开发/条件注解.md",
-    "href": "/Spring/注解开发/条件注解",
-    "module": "Spring",
-    "updatedAt": "2026-06-12 14:47"
-  },
-  {
     "title": "JSR-303",
     "path": "docs/other/JSR-303/注解.md",
     "href": "/other/JSR-303/注解",
@@ -193,13 +648,6 @@
     "path": "docs/other/Lomok/全局配置文件.md",
     "href": "/other/Lomok/全局配置文件",
     "module": "other",
-    "updatedAt": "2026-06-12 11:58"
-  },
-  {
-    "title": "AspectJ",
-    "path": "docs/Spring/面向切面编程/AspectJ.md",
-    "href": "/Spring/面向切面编程/AspectJ",
-    "module": "Spring",
     "updatedAt": "2026-06-12 11:58"
   },
   {
@@ -287,13 +735,6 @@
     "updatedAt": "2026-06-12 11:58"
   },
   {
-    "title": "实例化对象",
-    "path": "docs/Spring/注解开发/实例化对象.md",
-    "href": "/Spring/注解开发/实例化对象",
-    "module": "Spring",
-    "updatedAt": "2026-06-12 11:58"
-  },
-  {
     "title": "Aware接口",
     "path": "docs/Spring/Bean的生命周期/Aware.md",
     "href": "/Spring/Bean的生命周期/Aware",
@@ -322,27 +763,6 @@
     "updatedAt": "2026-06-12 11:58"
   },
   {
-    "title": "文件库表设计",
-    "path": "docs/web/文件上传/文件库表设计.md",
-    "href": "/web/文件上传/文件库表设计",
-    "module": "web",
-    "updatedAt": "2026-06-11 17:55"
-  },
-  {
-    "title": "Springboot配置客户端",
-    "path": "docs/web/文件上传/OSS客户端配置.md",
-    "href": "/web/文件上传/OSS客户端配置",
-    "module": "web",
-    "updatedAt": "2026-06-11 17:55"
-  },
-  {
-    "title": "域名备案",
-    "path": "docs/web/域名备案.md",
-    "href": "/web/域名备案",
-    "module": "web",
-    "updatedAt": "2026-06-11 17:55"
-  },
-  {
     "title": "Spring 默认参数绑定",
     "path": "docs/Springboot/请求处理/Spring 默认参数绑定.md",
     "href": "/Springboot/请求处理/Spring 默认参数绑定",
@@ -357,199 +777,10 @@
     "updatedAt": "2026-06-09 16:10"
   },
   {
-    "title": "主程序类",
-    "path": "docs/Springboot/入门/3.主程序类.md",
-    "href": "/Springboot/入门/3.主程序类",
-    "module": "Springboot",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "分片上传（Multipart Upload）",
-    "path": "docs/web/文件上传/分片上传.md",
-    "href": "/web/文件上传/分片上传",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "单文件上传",
-    "path": "docs/web/文件上传/简单上传.md",
-    "href": "/web/文件上传/简单上传",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "谁上传至OSS",
-    "path": "docs/web/文件上传/谁上传至OSS.md",
-    "href": "/web/文件上传/谁上传至OSS",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "原理",
-    "path": "docs/web/定时任务/XXL-Job/原理.md",
-    "href": "/web/定时任务/XXL-Job/原理",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "QuickStart",
-    "path": "docs/web/定时任务/XXL-Job/QuickStart.md",
-    "href": "/web/定时任务/XXL-Job/QuickStart",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "集群化",
-    "path": "docs/web/定时任务/XXL-Job/集群化.md",
-    "href": "/web/定时任务/XXL-Job/集群化",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "调度中心",
-    "path": "docs/web/定时任务/XXL-Job/调度中心.md",
-    "href": "/web/定时任务/XXL-Job/调度中心",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "Job",
-    "path": "docs/web/定时任务/Quartz/3.Job.md",
-    "href": "/web/定时任务/Quartz/3.Job",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "持久化",
-    "path": "docs/web/定时任务/Quartz/7.持久化.md",
-    "href": "/web/定时任务/Quartz/7.持久化",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "Trigger",
-    "path": "docs/web/定时任务/Quartz/4.Trigger.md",
-    "href": "/web/定时任务/Quartz/4.Trigger",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "Listener",
-    "path": "docs/web/定时任务/Quartz/6.Listener.md",
-    "href": "/web/定时任务/Quartz/6.Listener",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "Misfire",
-    "path": "docs/web/定时任务/Quartz/5.Misfire.md",
-    "href": "/web/定时任务/Quartz/5.Misfire",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "基本原理",
-    "path": "docs/web/定时任务/Quartz/1.基本原理.md",
-    "href": "/web/定时任务/Quartz/1.基本原理",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
-    "title": "Scheduler",
-    "path": "docs/web/定时任务/Quartz/2.Scheduler.md",
-    "href": "/web/定时任务/Quartz/2.Scheduler",
-    "module": "web",
-    "updatedAt": "2026-06-09 16:10"
-  },
-  {
     "title": "xAxis 为什么会被序列化成 xaxis",
     "path": "docs/blogs/xAxis序列化问题解析.md",
     "href": "/blogs/xAxis序列化问题解析",
     "module": "blogs",
-    "updatedAt": "2026-06-09 09:26"
-  },
-  {
-    "title": "MultipartFile",
-    "path": "docs/web/文件上传/MultipartFile.md",
-    "href": "/web/文件上传/MultipartFile",
-    "module": "web",
-    "updatedAt": "2026-06-09 09:26"
-  },
-  {
-    "title": "断点续传",
-    "path": "docs/web/文件上传/断点续传.md",
-    "href": "/web/文件上传/断点续传",
-    "module": "web",
-    "updatedAt": "2026-06-09 09:26"
-  },
-  {
-    "title": "HTTP轮询",
-    "path": "docs/web/实时通信/HTTP轮询.md",
-    "href": "/web/实时通信/HTTP轮询",
-    "module": "web",
-    "updatedAt": "2026-06-09 09:26"
-  },
-  {
-    "title": "WebSocket",
-    "path": "docs/web/实时通信/WebSocket.md",
-    "href": "/web/实时通信/WebSocket",
-    "module": "web",
-    "updatedAt": "2026-06-09 09:26"
-  },
-  {
-    "title": "SSE",
-    "path": "docs/web/实时通信/SSE.md",
-    "href": "/web/实时通信/SSE",
-    "module": "web",
-    "updatedAt": "2026-06-09 09:26"
-  },
-  {
-    "title": "微信支付",
-    "path": "docs/web/支付/微信支付.md",
-    "href": "/web/支付/微信支付",
-    "module": "web",
-    "updatedAt": "2026-06-09 09:26"
-  },
-  {
-    "title": "基本概念",
-    "path": "docs/web/支付/基本概念.md",
-    "href": "/web/支付/基本概念",
-    "module": "web",
-    "updatedAt": "2026-06-09 09:26"
-  },
-  {
-    "title": "微信网页授权",
-    "path": "docs/web/支付/微信网页授权.md",
-    "href": "/web/支付/微信网页授权",
-    "module": "web",
-    "updatedAt": "2026-06-09 09:26"
-  },
-  {
-    "title": "签名（SignName）",
-    "path": "docs/web/短信服务/签名.md",
-    "href": "/web/短信服务/签名",
-    "module": "web",
-    "updatedAt": "2026-06-09 09:26"
-  },
-  {
-    "title": "资质",
-    "path": "docs/web/短信服务/资质.md",
-    "href": "/web/短信服务/资质",
-    "module": "web",
-    "updatedAt": "2026-06-09 09:26"
-  },
-  {
-    "title": "发送",
-    "path": "docs/web/短信服务/发送.md",
-    "href": "/web/短信服务/发送",
-    "module": "web",
-    "updatedAt": "2026-06-09 09:26"
-  },
-  {
-    "title": "模板",
-    "path": "docs/web/短信服务/模板.md",
-    "href": "/web/短信服务/模板",
-    "module": "web",
     "updatedAt": "2026-06-09 09:26"
   },
   {
@@ -959,13 +1190,6 @@
     "updatedAt": "2026-06-06 21:55"
   },
   {
-    "title": "静态资源",
-    "path": "docs/Springboot/web/静态资源.md",
-    "href": "/Springboot/web/静态资源",
-    "module": "Springboot",
-    "updatedAt": "2026-06-06 21:55"
-  },
-  {
     "title": "RestTemplate",
     "path": "docs/Springboot/web/RestTemplate.md",
     "href": "/Springboot/web/RestTemplate",
@@ -1046,34 +1270,6 @@
     "title": "默认配置",
     "path": "docs/Springboot/自动配置/默认配置.md",
     "href": "/Springboot/自动配置/默认配置",
-    "module": "Springboot",
-    "updatedAt": "2026-06-06 21:55"
-  },
-  {
-    "title": "配置绑定到Bean",
-    "path": "docs/Springboot/外部化配置/2.配置绑定到Bean.md",
-    "href": "/Springboot/外部化配置/2.配置绑定到Bean",
-    "module": "Springboot",
-    "updatedAt": "2026-06-06 21:55"
-  },
-  {
-    "title": "配置文件",
-    "path": "docs/Springboot/外部化配置/1.配置文件.md",
-    "href": "/Springboot/外部化配置/1.配置文件",
-    "module": "Springboot",
-    "updatedAt": "2026-06-06 21:55"
-  },
-  {
-    "title": "Logback",
-    "path": "docs/Springboot/日志/Logback.md",
-    "href": "/Springboot/日志/Logback",
-    "module": "Springboot",
-    "updatedAt": "2026-06-06 21:55"
-  },
-  {
-    "title": "日志框架",
-    "path": "docs/Springboot/日志/日志框架.md",
-    "href": "/Springboot/日志/日志框架",
     "module": "Springboot",
     "updatedAt": "2026-06-06 21:55"
   },
