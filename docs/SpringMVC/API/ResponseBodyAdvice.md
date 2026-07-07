@@ -4,44 +4,6 @@
 
 如果你想要在项目里做**全局统一返回值包装**、**加密/解密**、或**统一日志打印**，它就是最佳选择。
 
-## 它在 Spring MVC 中的位置
-
-`ResponseBodyAdvice` 的工作契机介于 Controller 和 `HttpMessageConverter`（如 Jackson）之间。整个流程如下：
-
-1. **Controller** 处理完业务，返回一个对象（例如 `User` 对象）。
-2. Spring 发现该方法标注了 `@ResponseBody`。
-3. **`ResponseBodyAdvice` 介入**，捞出这个 `User` 对象，你可以把它包装成 `Result<User>`。
-4. **`HttpMessageConverter`** 将最终的对象序列化为 JSON 字符串，返回给前端。
-
-```
-请求
- ↓
-Controller
- ↓
-返回对象
- ↓
-ResponseBodyAdvice
- ↓
-HttpMessageConverter
- ↓
-JSON序列化
- ↓
-响应给前端
-```
-
-也就是说：
-
-```java
-@GetMapping("/user")
-public User getUser() {
-    return new User("张三");
-}
-```
-
-Controller 返回 `User` 后，会先经过 `ResponseBodyAdvice`，然后才转换成 JSON。
-
-
-
 ## 源码
 
 ```java
@@ -82,7 +44,7 @@ public interface ResponseBodyAdvice<T> {
 
 ### beforeBodyWrite
 
-对返回体进行具体的修改逻辑
+在对返回值对象序列化之前调用
 
 ## Example
 

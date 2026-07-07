@@ -60,7 +60,31 @@ public void addResourceHandlers(ResourceHandlerRegistry registry) {
 }
 ```
 
+### configureMessageConverters
 
+完全自定义消息转换器列表。**会覆盖 Spring Boot 的默认配置**，慎用。
+
+```java
+@Override
+public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+    converters.add(new MappingJackson2HttpMessageConverter());
+}
+```
+
+### extendMessageConverters
+
+在默认转换器列表的基础上**追加或调整**，不会覆盖默认配置，推荐使用。
+
+```java
+@Override
+public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
+    // 在末尾添加自定义转换器
+    converters.add(new MyCustomConverter());
+    
+    // 或在指定位置插入（索引 0 表示最高优先级）
+    converters.add(0, new FastJsonHttpMessageConverter());
+}
+```
 
 ## Example
 

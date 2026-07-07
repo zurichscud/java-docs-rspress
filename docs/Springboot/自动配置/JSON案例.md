@@ -134,37 +134,6 @@ public class FastJsonAutoConfiguration {
 
 由于 Spring Boot 不会自动帮你把 FastJson 装配进 `AbstractHttpMessageConverter` 的执行队列里，你需要写一个配置类，手动把它塞进去，并**提升它的优先级**。
 
-- 使用`configureMessageConverters`会完全接管Spring的消息转换器，这会导致消息转换器的缺失
-
-```java
-import com.alibaba.fastjson2.support.spring6.http.converter.FastJsonHttpMessageConverter;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-import java.util.List;
-
-@Configuration
-public class WebMvcConfig implements WebMvcConfigurer {
-
-    @Override
-    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        // 1. 创建 FastJson 的转换器（它也是 AbstractHttpMessageConverter 的子类）
-        FastJsonHttpMessageConverter fastJsonConverter = new FastJsonHttpMessageConverter();
-        
-        // 2. 这里可以自定义 FastJson 的序列化特性（比如：时间格式化、空值显示等）
-        // FastJsonConfig config = new FastJsonConfig();
-        // config.setDateFormat("yyyy-MM-dd HH:mm:ss");
-        // fastJsonConverter.setFastJsonConfig(config);
-
-        // 3. 将其添加到转换器列表的最前面（index 0），确保它的优先级高于 Jackson
-        converters.add(0, fastJsonConverter);
-    }
-}
-```
-
-- 推荐使用`extendMessageConverters`更加友好
-
 ```java
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {

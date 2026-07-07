@@ -25,10 +25,6 @@
   },
   {
     "type": "file",
-    "name": "MappingJackson2HttpMessageConverter"
-  },
-  {
-    "type": "file",
     "name": "MediaType"
   },
   {
