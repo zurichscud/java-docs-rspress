@@ -14,5 +14,9 @@
   {
     "type": "file",
     "name": "自动配置"
+  },
+  {
+    "type": "file",
+    "name": "JSON案例"
   }
 ]

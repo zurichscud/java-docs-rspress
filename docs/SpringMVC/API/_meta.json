@@ -13,7 +13,11 @@
   },
   {
     "type": "file",
-    "name": "HttpMessageConverter"
+    "name": "AbstractHttpMessageConverter"
+  },
+  {
+    "type": "file",
+    "name": "HttpInputMessage"
   },
   {
     "type": "file",
@@ -22,6 +26,10 @@
   {
     "type": "file",
     "name": "MappingJackson2HttpMessageConverter"
+  },
+  {
+    "type": "file",
+    "name": "MediaType"
   },
   {
     "type": "file",

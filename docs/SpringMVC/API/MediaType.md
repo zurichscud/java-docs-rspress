@@ -1,18 +1,17 @@
 # MediaType
 
-`MediaType` = **Java 代码里对 HTTP Content-Type 的封装**
+`Content-Type`（发过去的格式）
 
-在 Spring Boot 和 HTTP 协议的语境下，MediaType（媒体类型） 用来标识传输的数据到底是什么格式，从而让发送端和接收端能够正确地解析报文。
+MediaType 实际上是互联网标准 MIME 类型（Multipurpose Internet Mail Extensions） 在 Spring 中的面向对象封装。MediaType常用于描述两个请求头：
 
-MediaType 实际上是互联网标准 MIME 类型（Multipurpose Internet Mail Extensions） 在 Spring 中的面向对象封装。
+- `Content-Type`（发过去的格式）
+- `Accept`（想接收的格式）
 
 ```java
 package org.springframework.http;
 ```
 
-```java
-response.setContentType(MediaType.APPLICATION_OCTET_STREAM_VALUE);
-```
+
 
 ## 标准结构
 
