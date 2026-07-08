@@ -49,10 +49,6 @@
   },
   {
     "type": "file",
-    "name": "Converter"
-  },
-  {
-    "type": "file",
     "name": "Filter"
   },
   {
@@ -86,5 +82,17 @@
   {
     "type": "file",
     "name": "@CookieValue"
+  },
+  {
+    "type": "file",
+    "name": "@InitBinder"
+  },
+  {
+    "type": "file",
+    "name": "@EnableWebMvc"
+  },
+  {
+    "type": "file",
+    "name": "PropertyEditor"
   }
 ]
