@@ -1,4 +1,4 @@
-# validator
+# 参数校验
 
 `hibernate-validator` 是 Java 后端参数校验的绝对主力，它实现了 Jakarta Bean Validation（以前叫 JSR-380）规范。
 
