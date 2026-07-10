@@ -1,6 +1,6 @@
 # HttpMessageConverter
 
-> HTTP消息转换器
+> HTTP消息转换
 
 HttpMessageConverter 专门负责在 Java 对象 和 HTTP 请求/响应体（如 JSON、XML、文本等） 之间进行双向转换。
 

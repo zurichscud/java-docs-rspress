@@ -3,10 +3,6 @@
     "type": "file",
     "name": "内容协商"
   },
-    {
-    "type": "file",
-    "name": "Converter"
-  },
   {
     "type": "file",
     "name": "HttpMessageConverter"
