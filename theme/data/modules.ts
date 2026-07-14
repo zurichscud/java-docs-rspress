@@ -5,6 +5,7 @@ import {
   siOpenjdk,
   siSpring,
   siSpringboot,
+  siSpringsecurity,
   siSqlite,
   siApachemaven,
   type SimpleIcon,
@@ -78,6 +79,13 @@ export const modules: ModuleItem[] = [
     title: "SpringMVC",
     href: "/SpringMVC/基本/Filter",
     icon: siSpring,
+  },
+  {
+    name: "SpringSecurity",
+    title: "Spring Security",
+    href: "/SpringSecurity/概述",
+    count: "6 notes",
+    icon: siSpringsecurity,
   },
   {
     name: "web",
