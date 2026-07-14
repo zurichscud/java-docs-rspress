@@ -1,4 +1,4 @@
-# JSON参数
+# RequestBody
 
 我们可以使用`@RequestBody`解析请求中的JSON参数
 

@@ -1,4 +1,4 @@
-# 路径参数
+# PathVariable
 
 在 **Spring Boot（Spring MVC）** 中，获取 **URL 路径参数（Path Variable）** 通常使用 `@PathVariable` 注解。
 

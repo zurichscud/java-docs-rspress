@@ -1,4 +1,4 @@
-# 矩阵变量
+# MatrixVariable
 
 ## 基本概念
 
