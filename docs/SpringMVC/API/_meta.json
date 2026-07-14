@@ -37,14 +37,6 @@
   },
   {
     "type": "file",
-    "name": "RequestBodyAdvice"
-  },
-  {
-    "type": "file",
-    "name": "ResponseBodyAdvice"
-  },
-  {
-    "type": "file",
     "name": "DefaultErrorAttributes"
   },
   {
@@ -69,23 +61,11 @@
   },
   {
     "type": "file",
-    "name": "@ControllerAdvice"
-  },
-  {
-    "type": "file",
-    "name": "@RestControllerAdvice"
-  },
-  {
-    "type": "file",
     "name": "@ExceptionHandler"
   },
   {
     "type": "file",
     "name": "@CookieValue"
-  },
-  {
-    "type": "file",
-    "name": "@InitBinder"
   },
   {
     "type": "file",

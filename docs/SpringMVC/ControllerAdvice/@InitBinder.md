@@ -40,6 +40,14 @@ public class GlobalBindingAdvice {
 }
 ```
 
+::: tip 最佳实践
+
+对于全局的Controller上的参数解析，更推荐使用`Converter`
+
+:::
+
+
+
 ## registerCustomEditor
 
 ### 第一个参数：requiredType（目标类型）

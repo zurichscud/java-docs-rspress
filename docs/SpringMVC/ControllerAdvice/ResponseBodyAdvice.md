@@ -108,3 +108,29 @@ spring:
     throw-exception-if-no-handler-found: true # 找不到 Handler 时抛出异常
 ```
 
+## 处理返回值
+
+```java
+┌─────────────────────────────────────────────────────────────┐
+│  返回值（出参）                                               │
+│     ↓                                                       │
+│     RequestResponseBodyMethodProcessor（处理 @ResponseBody）  │
+│     ↓                                                       │
+│     ├─ ResponseBodyAdvice.supports()    ← 判断是否拦截        │
+│     ↓                                                       │
+│     ├─ ResponseBodyAdvice.beforeBodyWrite(body, ...)        │
+│     │      ↑ 此时 body 还是 Java 对象，在这里统一包装 Result   │
+│     ↓                                                       │
+│     ├─ 【序列化】HttpMessageConverter.write()                    │
+│     │      ↑ 这里！遍历匹配 Converter，调用 Jackson 序列化      │
+│     ↓                                                       │
+│     └─ 写入 ServletOutputStream                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+当响应标注了`@ResponseBody`时，将使用`RequestResponseBodyMethodProcessor`进行处理。他包括：
+
+- 调用`ResponseBodyAdvice`
+- 选择并调用 `MessageConverter.write()`（序列化）
+- 写入 ServletOutputStream
+

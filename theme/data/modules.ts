@@ -76,7 +76,7 @@ export const modules: ModuleItem[] = [
   {
     name: "SpringMVC",
     title: "SpringMVC",
-    href: "/SpringMVC/响应设计",
+    href: "/SpringMVC/基本/Filter",
     icon: siSpring,
   },
   {
