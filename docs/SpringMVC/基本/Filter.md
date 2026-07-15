@@ -2,6 +2,45 @@
 
 虽然 Spring 提供了拦截器（Interceptor）和 AOP（切面），但 Filter 依托于 Servlet 容器，处于请求的最外层。这种特殊的地理位置，决定了它在处理**全局性、系统级、与业务逻辑解耦**的场景时，具有不可替代的地位。
 
+```mermaid
+sequenceDiagram
+    autonumber
+    participant Client as 客户端
+    participant FC as FilterChain
+    participant F1 as Filter1<br/>(如 CharacterEncodingFilter)
+    participant F2 as Filter2<br/>(如 JwtAuthenticationFilter)
+    participant DS as DispatcherServlet
+    participant C as Controller
+
+    Client->>FC: HTTP Request
+
+    FC->>F1: doFilter(request,response)
+    Note over F1: 前置处理<br/>例如设置编码、日志、鉴权
+
+    F1->>F2: chain.doFilter(request,response)
+
+    F2->>F2: 前置处理<br/>例如解析Token
+
+    F2->>DS: chain.doFilter(request,response)
+
+    DS->>C: 调用Controller方法
+    C-->>DS: 返回业务结果
+
+    DS-->>F2: 返回Response
+
+    F2->>F2: 后置处理<br/>例如记录耗时
+
+    F2-->>F1: chain返回
+
+    F1->>F1: 后置处理<br/>例如清理资源
+
+    F1-->>FC: 返回
+
+    FC-->>Client: HTTP Response
+```
+
+
+
 通常，在一个标准的 Spring Boot 项目中，以下几个核心场景几乎必然会用到 Filter：
 
 ## 认证与授权
@@ -50,3 +89,29 @@ Spring Security 的核心就是 `SecurityFilterChain`。既然官方和主流框
 | **执行时机** | 在进入 `DispatcherServlet` **之前**和**之后**              | 在进入 `Controller` **之前**和**之后**                       |
 | **核心能力** | **可以操纵 Request / Response 对象**（如包装、替换输入流） | 无法替换 Request/Response，但能获取到目标 Controller 的方法信息（Method） |
 | **适用场景** | 权限控制、跨域、XSS 过滤、全局性能监控                     | 业务级别的Token解析、防重复提交、单接口权限粒度控制          |
+
+
+
+
+
+## doFilter
+
+Filter 是否继续执行，由 `chain.doFilter()` 决定
+
+```java
+@Component
+public class MyFilter implements Filter {
+
+    @Override
+    public void doFilter(ServletRequest request,
+                         ServletResponse response,
+                         FilterChain chain)
+            throws IOException, ServletException {
+
+        System.out.println("Filter 前置处理");
+
+        chain.doFilter(request, response);
+
+        System.out.println("Filter 后置处理");
+    }
+}
