@@ -1,8 +1,9 @@
 import * as path from 'node:path';
 import { defineConfig } from '@rspress/core';
 import pluginFileTree from 'rspress-plugin-file-tree';
-import mermaid from 'rspress-plugin-mermaid';
 import { visit } from 'unist-util-visit';
+
+import mermaidZoom from './plugins/mermaid-zoom';
 
 function remarkNormalizeCodeLang() {
   const aliasMap: Record<string, string> = {
@@ -39,7 +40,7 @@ export default defineConfig({
   },
   plugins: [
     pluginFileTree(),
-    mermaid(),
+    mermaidZoom(),
   ],
   markdown: {
     remarkPlugins: [remarkNormalizeCodeLang],
