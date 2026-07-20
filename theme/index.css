@@ -1114,3 +1114,31 @@ li.rp-nav-menu__item::before {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.rp-doc h2 {
+  margin-top: 3.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rp-c-divider-light);
+  color: var(--rp-c-text-0);
+  font-size: clamp(1.5rem, 2.3vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
+}
+
+.rp-doc h2:first-of-type::before {
+  display: none;
+}
+
+.rp-doc h3 {
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  padding: 0.1rem 0 0.1rem 0.75rem;
+  border-left: 2px solid var(--rp-c-brand);
+  color: var(--rp-c-text-0);
+  font-size: 1.25rem;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  line-height: 1.45;
+}
