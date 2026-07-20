@@ -1,0 +1,57 @@
+[
+  {
+    "type": "file",
+    "name": "api",
+    "label": "API 索引"
+  },
+  {
+    "type": "dir-section-header",
+    "name": "基本",
+    "label": "基础"
+  },
+  {
+    "type": "dir-section-header",
+    "name": "参数解析",
+    "label": "请求参数"
+  },
+  {
+    "type": "dir-section-header",
+    "name": "HttpMessageConverter",
+    "label": "消息转换"
+  },
+  {
+    "type": "dir-section-header",
+    "name": "ControllerAdvice",
+    "label": "全局控制器增强"
+  },
+  {
+    "type": "dir-section-header",
+    "name": "Convert",
+    "label": "类型转换"
+  },
+  {
+    "type": "dir-section-header",
+    "name": "JSON",
+    "label": "JSON"
+  },
+  {
+    "type": "dir-section-header",
+    "name": "过滤器",
+    "label": "过滤器"
+  },
+  {
+    "type": "dir-section-header",
+    "name": "远程调用",
+    "label": "远程调用"
+  },
+  {
+    "type": "dir-section-header",
+    "name": "应用",
+    "label": "应用"
+  },
+  {
+    "type": "dir-section-header",
+    "name": "参考",
+    "label": "参考"
+  }
+]
