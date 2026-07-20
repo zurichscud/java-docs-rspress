@@ -1103,3 +1103,14 @@ li.rp-nav-menu__item::before {
     padding: 9px 12px 9px 14px;
   }
 }
+
+.rp-outline__toc .rp-toc-item {
+  min-width: 0;
+}
+
+.rp-outline__toc .rp-toc-item__text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
