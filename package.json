@@ -4,9 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "npm run gen:api-indexes",
     "dev": "rspress dev",
+    "prebuild": "npm run gen:api-indexes",
     "build": "rspress build",
     "preview": "rspress preview",
+    "gen:api-indexes": "node scripts/generate-api-indexes.mjs",
     "gen:recent-updates": "node scripts/generate-recent-updates.mjs"
   },
   "dependencies": {

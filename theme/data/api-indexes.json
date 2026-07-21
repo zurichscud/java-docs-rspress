@@ -1,0 +1,74 @@
+{
+  "Spring/API": [
+    {
+      "name": "EventListener"
+    },
+    {
+      "name": "生命周期"
+    }
+  ],
+  "SpringMVC/API": [
+    {
+      "name": "@CookieValue"
+    },
+    {
+      "name": "@EnableWebMvc"
+    },
+    {
+      "name": "@ExceptionHandler"
+    },
+    {
+      "name": "@RequestBody"
+    },
+    {
+      "name": "@ResponseBody"
+    },
+    {
+      "name": "@RestController"
+    },
+    {
+      "name": "AbstractHttpMessageConverter"
+    },
+    {
+      "name": "DefaultErrorAttributes"
+    },
+    {
+      "name": "HttpInputMessage"
+    },
+    {
+      "name": "HttpServletRequest"
+    },
+    {
+      "name": "MediaType"
+    },
+    {
+      "name": "PropertyEditor"
+    },
+    {
+      "name": "RequestContextHolder"
+    },
+    {
+      "name": "RequestEntity"
+    },
+    {
+      "name": "RequestResponseBodyMethodProcessor"
+    },
+    {
+      "name": "ResponseEntity"
+    },
+    {
+      "name": "StringHttpMessageConverter"
+    },
+    {
+      "name": "WebMvcConfigurer"
+    }
+  ],
+  "Springboot/API": [
+    {
+      "name": "DefaultErrorAttributes"
+    },
+    {
+      "name": "SpringApplicationRunListener"
+    }
+  ]
+}
