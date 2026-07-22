@@ -1,6 +1,6 @@
 # UserDetailsService
 
-## UserDetailsService
+> 查询用户
 
 ```java
 package com.example.security;
@@ -39,7 +39,7 @@ public class MyCustomUserDetailsService implements UserDetailsService {
 }
 ```
 
-## DaoAuthenticationProvider
+## 返回值处理
 
 你可能好奇：“这里只看到了根据用户名查库，我前端传过来的密码是在哪儿校验的呢？”
 
@@ -47,27 +47,9 @@ public class MyCustomUserDetailsService implements UserDetailsService {
 
 当你把上面的 `user` 对象 `return` 出去之后，Spring Security 的核心组件 `DaoAuthenticationProvider` 会自动接管后面的事：
 
-1. 它会拿到你 `return` 的 `user` 对象里的**数据库密文**。
-2. 它会拿到前端输入的**明文密码**。
-3. 它自动调用你在配置类里声明的 `BCryptPasswordEncoder.matches(明文, 密文)` 进行比对。
+1. 拿到你 `return` 的 `user` 对象里的**数据库密文**。
+2. 拿到前端输入的**明文密码**。
+3. 自动调用 `PasswordEncoder.matches(明文, 密文)` 进行比对。
 
 所以，这个 Service 的定位非常纯粹，就是一个“数据库资料提取器”。
 
-
-
-## PasswordEncoder
-
-- **你声明 Bean**：你在配置类（通常是继承了 `WebSecurityConfigurerAdapter`）中通过 `@Bean` 声明了 `BCryptPasswordEncoder`
-
-  ```java
-  @Bean
-  public PasswordEncoder passwordEncoder(){
-      return new BCryptPasswordEncoder();
-  }
-  ```
-
-- **Spring 自动装配**：当 Spring Security 初始化 `DaoAuthenticationProvider` 时，它发现 Spring 容器中恰好有一个类型为 `PasswordEncoder` 的 Bean，就会**自动**把它注入（Autowired）到自己的内部属性中。
-
-- 不要使用默认的`PasswordEncoder` ：`DelegatingPasswordEncoder`
-
-  它要求数据库中存储的密码必须带有一个**大括号前缀 `{id}`**，用来指定这个密码是用什么算法加密的。

@@ -1,4 +1,4 @@
-# 设计思想
+# 为什么使用Class作为形参
 
 在 Spring Security 的配置中，比如 `.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)`，确实有人会想：**“为什么第二参数一定要传一个 `Class<?>` 对象，直接传个字符串（比如 `"UsernamePasswordAuthenticationFilter"`）不是更省事吗？”**
 
