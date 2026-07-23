@@ -28,66 +28,6 @@ public interface Authentication extends Principal, Serializable {
 }
 ```
 
-## Authentication 认证前后的变化
-
-### 认证前
-
-```java
-Authentication authentication =
-    new UsernamePasswordAuthenticationToken(
-        "admin",
-        "123456"
-    );
-```
-
-状态：
-
-```java
-Authentication
-
-principal
-    admin
-
-credentials
-    123456
-
-authorities
-    []
-
-authenticated
-    false
-```
-
-### 认证后
-
-`DaoAuthenticationProvider` 校验成功：
-
-```java
-return new UsernamePasswordAuthenticationToken(
-        userDetails,
-        null,
-        authorities
-);
-```
-
-状态：
-
-```java
-Authentication
-
-principal
-    UserDetails
-
-credentials
-    null
-
-authorities
-    ROLE_ADMIN
-
-authenticated
-    true
-```
-
 ## UsernamePasswordAuthenticationToken
 
 `UsernamePasswordAuthenticationToken` 是 `Authentication` 接口最常用的实现类，用于封装用户名/密码形式的认证信息。

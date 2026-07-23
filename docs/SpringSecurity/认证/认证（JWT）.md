@@ -106,6 +106,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 }
 ```
 
+`UsernamePasswordAuthenticationToken` 参考 [Authentication](../API/Authentication)
+
 ## 配置 Spring Security
 
 `UsernamePasswordAuthenticationFilter`的认证方式默认是启用的，我们需要重写配置
@@ -150,7 +152,6 @@ public class SecurityConfig {
     }
 }
 ```
-
 
 
 ## 退出登录
