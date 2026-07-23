@@ -63,6 +63,38 @@
       "name": "WebMvcConfigurer"
     }
   ],
+  "SpringSecurity/API": [
+    {
+      "name": "Authentication"
+    },
+    {
+      "name": "AuthenticationManager"
+    },
+    {
+      "name": "AuthenticationProvider"
+    },
+    {
+      "name": "FilterSecurityInterceptor"
+    },
+    {
+      "name": "HttpSecurity"
+    },
+    {
+      "name": "PasswordEncoder"
+    },
+    {
+      "name": "SecurityContext"
+    },
+    {
+      "name": "SecurityContextHolder"
+    },
+    {
+      "name": "UserDetails"
+    },
+    {
+      "name": "UserDetailsService"
+    }
+  ],
   "Springboot/API": [
     {
       "name": "DefaultErrorAttributes"

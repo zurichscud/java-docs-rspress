@@ -8,6 +8,7 @@ import {
   siSpringsecurity,
   siSqlite,
   siApachemaven,
+  siDiagramsdotnet,
   type SimpleIcon,
 } from "simple-icons";
 
@@ -86,6 +87,13 @@ export const modules: ModuleItem[] = [
     href: "/SpringSecurity/概述",
     count: "6 notes",
     icon: siSpringsecurity,
+  },
+  {
+    name: "设计模式",
+    title: "设计模式",
+    href: "/设计模式/工厂模式",
+    count: "6 notes",
+    icon: siDiagramsdotnet,
   },
   {
     name: "web",

@@ -1,0 +1,42 @@
+[
+  {
+    "type": "file",
+    "name": "Authentication"
+  },
+  {
+    "type": "file",
+    "name": "AuthenticationManager"
+  },
+  {
+    "type": "file",
+    "name": "AuthenticationProvider"
+  },
+  {
+    "type": "file",
+    "name": "FilterSecurityInterceptor"
+  },
+  {
+    "type": "file",
+    "name": "HttpSecurity"
+  },
+  {
+    "type": "file",
+    "name": "PasswordEncoder"
+  },
+  {
+    "type": "file",
+    "name": "SecurityContext"
+  },
+  {
+    "type": "file",
+    "name": "SecurityContextHolder"
+  },
+  {
+    "type": "file",
+    "name": "UserDetails"
+  },
+  {
+    "type": "file",
+    "name": "UserDetailsService"
+  }
+]

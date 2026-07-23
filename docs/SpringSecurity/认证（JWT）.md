@@ -1,4 +1,4 @@
-# 认证
+# 认证（JWT）
 
 在前后端分离的系统中常使用JWT认证
 
@@ -7,8 +7,6 @@
 ## 基本思路
 
 我们可以参考SpringSecurity的UsernamePasswordAuthenticationFilter设计我们的登录接口。
-
-UsernamePasswordAuthenticationFilter会返回视图给浏览器登录。但是在前后端分离中我们通常使用AJAX进行交互。
 
 我们可以设计一个登录接口代替UsernamePasswordAuthenticationFilter，但两者的思路是相同的
 
@@ -57,9 +55,9 @@ public class AuthController {
 
 
 
-## JwtAuthenticationFilter
+## 创建JWT认证过滤器
 
-在标准的 Spring Security 架构中，我们通常会把自己写的 JwtTokenFilter插进 Spring Security 的过滤器链中（通常在 `UsernamePasswordAuthenticationFilter`之前）。每次请求进来时，先拦截下来解析 Token并存入`SecurityContextHolder`：
+我们通常会把自己写的 JwtTokenFilter插进 Spring Security 的过滤器链中（通常在 `UsernamePasswordAuthenticationFilter`之前）。每次请求进来时，先拦截下来解析 Token并存入`SecurityContextHolder`：
 
 ```java
 @Component
@@ -81,7 +79,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             token = token.substring(7); // 截取掉 "Bearer " 得到真正的 token
             
             try {
-                // 3. 解析 Token，从中获取用户名
+                // 3. 解析 Token，从中获取用户名。如果Token过期，会抛出异常
                 String username = JwtUtil.getUsernameFromToken(token);
                 
                 if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
@@ -153,15 +151,11 @@ public class SecurityConfig {
 }
 ```
 
-- **`addFilterBefore(filter, class)`**：把自定义过滤器放在某个标准过滤器**之前**（最常用）。
-- **`addFilterAfter(filter, class)`**：把自定义过滤器放在某个标准过滤器**之后**。
-- **`addFilterAt(filter, class)`**：把自定义过滤器放在和某个标准过滤器**相同的位置**（注意：这并不会替换原过滤器，只是它们俩的顺序变成随机/依赖注册顺序，通常不推荐，除非你手动关闭了原过滤器）。
-
 
 
 ## 退出登录
 
-因为服务器是无状态（Stateless）的，后端并不会在内存中保存用户的 Session。所以，退出登录的核心逻辑是**销毁 Token**。
+因为服务器是无状态的，后端并不会在内存中保存用户的 Session。所以，退出登录的核心逻辑是**销毁 Token**。
 
 - 删除Redis中的用户信息
 
@@ -214,3 +208,4 @@ public class AuthController {
 每个请求都有其自己独立的`SecurityContextHolder`，当这个请求处理完毕，`SecurityContextHolderFilter` 会**自动**将这个请求的`SecurityContextHolder`清空
 
 因此，我们“不需要”也“无法”通过在注销接口中删除 `SecurityContextHolder` 来影响后续请求。
+

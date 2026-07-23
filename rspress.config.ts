@@ -42,6 +42,12 @@ export default defineConfig({
     pluginFileTree(),
     mermaidZoom(),
   ],
+  builderConfig: {
+    dev: {
+      // Avoid stale lazy-compilation proxies after docs or global MDX components change.
+      lazyCompilation: false,
+    },
+  },
   markdown: {
     remarkPlugins: [remarkNormalizeCodeLang],
     link:{
