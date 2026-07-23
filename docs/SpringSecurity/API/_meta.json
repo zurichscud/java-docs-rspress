@@ -17,6 +17,10 @@
   },
   {
     "type": "file",
+    "name": "GrantedAuthority"
+  },
+  {
+    "type": "file",
     "name": "HttpSecurity"
   },
   {

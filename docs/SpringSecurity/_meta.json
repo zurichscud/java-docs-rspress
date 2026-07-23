@@ -1,38 +1,29 @@
 [
   {
     "type": "file",
-    "name": "概述",
-    "label": "概述"
+    "name": "概述"
   },
   {
     "type": "file",
-    "name": "认证（Session）",
-    "label": "认证（Session）"
+    "name": "过滤器链"
   },
   {
     "type": "file",
-    "name": "认证（JWT）",
-    "label": "认证（JWT）"
+    "name": "配置类"
   },
   {
     "type": "file",
-    "name": "过滤器链",
-    "label": "过滤器链"
+    "name": "请求上下文"
   },
   {
-    "type": "file",
-    "name": "RBAC",
-    "label": "RBAC"
+    "type": "dir-section-header",
+    "name": "认证",
+    "label": "认证"
   },
   {
-    "type": "file",
-    "name": "配置类",
-    "label": "配置类"
-  },
-  {
-    "type": "file",
-    "name": "请求上下文",
-    "label": "请求上下文"
+    "type": "dir-section-header",
+    "name": "鉴权",
+    "label": "鉴权"
   },
   {
     "type": "dir-section-header",
@@ -42,7 +33,6 @@
   {
     "type": "dir",
     "name": "API",
-    "label": "API",
     "collapsed": true
   }
 ]
